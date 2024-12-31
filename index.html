@@ -11,13 +11,8 @@
     <!--------------------- BOXICONS --------------------->
     <link href='./external/boxicons-2.1.1/css/boxicons.css' rel='stylesheet'>
 
-
     <!--------------------- SWIPER CSS --------------------->
     <link rel="stylesheet" href="./external/css/swiper-bundle.css">
-    <!-- <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    /> -->
 
     <!--------------------- CSS --------------------->
     <link rel="stylesheet" href="./assets/css/styles.css">
@@ -32,47 +27,8 @@
         <nav class="nav container">
             <a href="https://github.com/amulyavarshney" class="nav__logo">Amulya</a>
             <div class="nav__menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link active-link">
-                            <i class='bx bxs-home'></i>
-                        </a>
-                    </li>
-                    <!-- <li class="nav__item">
-                        <a href="#about" class="nav__link">
-                            <i class='bx bxs-user' ></i>
-                        </a>
-                    </li> -->
-                    <!-- <li class="nav__item">
-                        <a href="#skills" class="nav__link">
-                            <i class='bx bxs-book-open'></i>
-                        </a>
-                    </li> -->
-                    <li class="nav__item">
-                        <a href="#qualifications" class="nav__link">
-                            <i class='bx bxs-school'></i>
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#experiences" class="nav__link">
-                            <i class='bx bxs-briefcase-alt'></i>
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#works" class="nav__link">
-                            <i class='bx bx-task'></i>
-                        </a>
-                    </li>
-                    <!-- <li class="nav__item">
-                        <a href="#blogs" class="nav__link">
-                            <i class='bx bxs-bookmark'></i>
-                        </a>
-                    </li> -->
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link">
-                            <i class='bx bxs-message-square-detail'></i>
-                        </a>
-                    </li>
+                <ul class="nav__list" id="nav-list">
+                    <!-- Navigation items will be injected by JavaScript -->
                 </ul>
             </div>
 
@@ -84,6 +40,27 @@
         </nav>
     </header>
     <!--endregion-->
+
+    <script>
+        const navItems = [
+            { href: "#home", icon: "bxs-home" },
+            { href: "#skills", icon: "bxs-book-open" },
+            { href: "#qualifications", icon: "bxs-school" },
+            { href: "#experiences", icon: "bxs-briefcase-alt" },
+            { href: "#works", icon: "bx-task" },
+            { href: "#blogs", icon: "bxs-bookmark" },
+            { href: "#testimonial", icon: "bxs-user" },
+            { href: "#contact", icon: "bxs-message-square-detail" }
+        ];
+
+        const navList = document.getElementById('nav-list');
+        navItems.forEach(item => {
+            const li = document.createElement('li');
+            li.classList.add('nav__item');
+            li.innerHTML = `<a href="${item.href}" class="nav__link"><i class='bx ${item.icon}'></i></a>`;
+            navList.appendChild(li);
+        });
+    </script>
 
     <!--#region MAIN-->
     <main class="main">
@@ -97,35 +74,7 @@
                     <span class="home__greeting">Hello, I'm</span>
                     <h1 class="home__name">Amulya Varshney</h1>
                     <h3 class="home__role">Software Engineer - Carl Zeiss AG, India</h3>
-
-                    <!-- <div class="home__buttons">
-                        <a download="" href="./assets/pdf/AmulyaVarshney.pdf" class="button button--ghost">
-                            Download CV
-                        </a>
-                        <a href="#about" class="button">About me</a>
-                    </div> -->
                 </div>
-
-                <!-- <div class="home__handle">
-                    <img src="./assets/img/profile.png" alt="" class="home__img">
-                </div> -->
-
-                <!-- <div class="home__social">
-                    <a href="https://www.linkedin.com/in/varamu/" target="_blank" class="home__social-link">
-                        <i class='bx bxl-linkedin-square'></i>
-                    </a>
-                    <a href="https://github.com/amulyavarshney" target="_blank" class="home__social-link">
-                        <i class='bx bxl-github'></i>
-                    </a>
-                    <a href="https://twitter.com/amulya_varshney" target="_blank" class="home__social-link">
-                        <i class='bx bxl-twitter'></i>
-                    </a>
-                </div> -->
-
-                <!-- <a href="#about" class="home__scroll">
-                    <i class='bx bx-mouse home__scroll-icon'></i>
-                    <span class="home__scroll-name">Scroll Down</span>
-                </a> -->
             </div>
 
             <!-- NEW SUB-SECTION FROM ABOUT -->
@@ -189,7 +138,7 @@
         <!--END SUB-SECTION-->
 
         <!-- SKILLS -->
-        <!-- <section class="skills section" id="skills">
+        <section class="skills section" id="skills">
             <h2 class="section__title">Skills</h2>
             <span class="section__subtitle">My Technical level</span>
 
@@ -369,13 +318,13 @@
                     </div>
 
                 </div>
-        </section> -->
+        </section>
         <!--END SUB-SECTION-->
 
         <!-- QUALIFICATION -->
         <section class="qualification section" id="qualifications">
             <h2 class="section__title">Qualification</h2>
-            <span class="section__subtitle">My Personel Journey</span>
+            <span class="section__subtitle">My Personal Journey</span>
 
             <div class="qualification-container container">
                 <div class="qualification-tabs">
@@ -389,163 +338,72 @@
                     </div>
                 </div>
                 <div class="qualification-sections">
-                    <!-- QUALIFICATION CONTENT 1 -->
-                    <div class="qualification-content qualification-active" data-content id="education">
-                        <!-- QUALIFICATION 1 -->
-                        <div class="qualification-data">
-                            <div class="qualification-data-alt">
-                                <h3 class="qualification-title">B.Tech in CSE</h3>
-                                <span class="qualification-subtitle">IIIT - Naya Raipur</span>
-                                <div class="qualification-calendar">
-                                    <i class="bx bxs-calendar"></i>
-                                    2019 - 2023
-                                </div>
-                            </div>
-                            <div>
-                                <span class="qualification-rounder"></span>
-                                <span class="qualification-line"></span>
-                            </div>
-                        </div>
-                        <!-- QUALIFICATION 2 -->
-                        <div class="qualification-data">
-                            <div></div>
-
-                            <div>
-                                <span class="qualification-rounder"></span>
-                                <span class="qualification-line"></span>
-                            </div>
-
-                            <div class="qualification-data-alt">
-                                <h3 class="qualification-title">Professional Diploma</h3>
-                                <span class="qualification-subtitle">HBTU Kanpur</span>
-                                <div class="qualification-calendar">
-                                    <i class="bx bxs-calendar"></i>
-                                    2018 - 2019
-                                </div>
-                            </div>
-                        </div>
-                        <!-- QUALIFICATION 3 -->
-                        <div class="qualification-data">
-                            <div class="qualification-data-alt">
-                                <h3 class="qualification-title">Intermediate School</h3>
-                                <span class="qualification-subtitle">K. H. M. C. Bahjoi</span>
-                                <div class="qualification-calendar">
-                                    <i class="bx bxs-calendar"></i>
-                                    2015 - 2017
-                                </div>
-                            </div>
-                            <div>
-                                <span class="qualification-rounder"></span>
-                                <span class="qualification-line"></span>
-                            </div>
-                        </div>
-                        <!-- QUALIFICATION 4 -->
-                        <div class="qualification-data">
-                            <div></div>
-
-                            <div>
-                                <span class="qualification-rounder"></span>
-                                <!-- <span class="qualification-line"></span> -->
-                            </div>
-
-                            <div class="qualification-data-alt">
-                                <h3 class="qualification-title">High School</h3>
-                                <span class="qualification-subtitle">S. H. C. S. Chandausi</span>
-                                <div class="qualification-calendar">
-                                    <i class="bx bxs-calendar"></i>
-                                    2013 - 2015
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- QUALIFICATION CONTENT 2 -->
-                    <div class="qualification-content" data-content id="work">
-                        <!-- QUALIFICATION 1 -->
-                        <div class="qualification-data">
-                            <div class="qualification-data-alt">
-                                <h3 class="qualification-title">Software Enginner</h3>
-                                <span class="qualification-subtitle">Zeiss - India</span>
-                                <div class="qualification-calendar">
-                                    <i class="bx bxs-calendar"></i>
-                                    Jul 2023 - Present
-                                </div>
-                            </div>
-                            <div>
-                                <span class="qualification-rounder"></span>
-                                <span class="qualification-line"></span>
-                            </div>
-                        </div>
-                        <!-- QUALIFICATION 2 -->
-                        <div class="qualification-data">
-                            <div></div>
-
-                            <div>
-                                <span class="qualification-rounder"></span>
-                                <span class="qualification-line"></span>
-                            </div>
-
-                            <div class="qualification-data-alt">
-                                <h3 class="qualification-title">Software Engineer Intern</h3>
-                                <span class="qualification-subtitle">Zeiss - India</span>
-                                <div class="qualification-calendar">
-                                    <i class="bx bxs-calendar"></i>
-                                    Jan 2023 - Jun 2023
-                                </div>
-                            </div>
-                        </div>
-                        <!-- QUALIFICATION 3 -->
-                        <div class="qualification-data">
-                            <div class="qualification-data-alt">
-                                <h3 class="qualification-title">Full Stack Developer Intern</h3>
-                                <span class="qualification-subtitle">Hackerearth - India</span>
-                                <div class="qualification-calendar">
-                                    <i class="bx bxs-calendar"></i>
-                                    Mar 2022 - Dec 2022
-                                </div>
-                            </div>
-                            <div>
-                                <span class="qualification-rounder"></span>
-                                <span class="qualification-line"></span>
-                            </div>
-                        </div>
-                        <!-- QUALIFICATION 4 -->
-                        <div class="qualification-data">
-                            <div></div>
-
-                            <div>
-                                <span class="qualification-rounder"></span>
-                                <span class="qualification-line"></span>
-                            </div>
-
-                            <div class="qualification-data-alt">
-                                <h3 class="qualification-title">R&D Intern</h3>
-                                <span class="qualification-subtitle">Samsung R&D Institute (SRI-B)</span>
-                                <div class="qualification-calendar">
-                                    <i class="bx bxs-calendar"></i>
-                                    Aug 2021 - Feb 2022
-                                </div>
-                            </div>
-                        </div>
-                        <!-- QUALIFICATION 5 -->
-                        <div class="qualification-data">
-                            <div class="qualification-data-alt">
-                                <h3 class="qualification-title">SDE Intern</h3>
-                                <span class="qualification-subtitle">DataChannel - India</span>
-                                <div class="qualification-calendar">
-                                    <i class="bx bxs-calendar"></i>
-                                    Mar 2021 - Jun 2021
-                                </div>
-                            </div>
-                            <div>
-                                <span class="qualification-rounder"></span>
-                                <!-- <span class="qualification-line"></span> -->
-                            </div>
-                        </div>
-                    </div>
+                    <div class="qualification-content qualification-active" data-content id="education"></div>
+                    <div class="qualification-content" data-content id="work"></div>
                 </div>
             </div>
         </section>
+
+        <script>
+            const qualifications = {
+                education: [
+                    { title: "B.Tech in CSE", subtitle: "IIIT - Naya Raipur", calendar: "2019 - 2023" },
+                    { title: "Professional Diploma", subtitle: "HBTU Kanpur", calendar: "2018 - 2019" },
+                    { title: "Intermediate School", subtitle: "K. H. M. C. Bahjoi", calendar: "2015 - 2017" },
+                    { title: "High School", subtitle: "S. H. C. S. Chandausi", calendar: "2013 - 2015" }
+                ],
+                work: [
+                    { title: "Software Engineer", subtitle: "Zeiss - India", calendar: "Jul 2023 - Present" },
+                    { title: "Software Engineer Intern", subtitle: "Zeiss - India", calendar: "Jan 2023 - Jun 2023" },
+                    { title: "Full Stack Developer Intern", subtitle: "Hackerearth - India", calendar: "Mar 2022 - Dec 2022" },
+                    { title: "R&D Intern", subtitle: "Samsung R&D Institute (SRI-B)", calendar: "Aug 2021 - Feb 2022" },
+                    { title: "SDE Intern", subtitle: "DataChannel - India", calendar: "Mar 2021 - Jun 2021" }
+                ]
+            };
+
+            function loadQualifications() {
+                Object.keys(qualifications).forEach(key => {
+                    const container = document.getElementById(key);
+                    qualifications[key].forEach((item, index) => {
+                        const div = document.createElement('div');
+                        div.classList.add('qualification-data');
+                        div.innerHTML = `
+                            ${index % 2 === 0 ? `
+                            <div class="qualification-data-alt">
+                                <h3 class="qualification-title">${item.title}</h3>
+                                <span class="qualification-subtitle">${item.subtitle}</span>
+                                <div class="qualification-calendar">
+                                    <i class="bx bxs-calendar"></i>
+                                    ${item.calendar}
+                                </div>
+                            </div>
+                            ` : `
+                            <div></div>
+                            `}
+                            <div>
+                                <span class="qualification-rounder"></span>
+                                ${index !== qualifications[key].length - 1 ? `<span class="qualification-line"></span>` : ``}
+                            </div>
+                            ${index % 2 !== 0 ? `
+                            <div class="qualification-data-alt">
+                                <h3 class="qualification-title">${item.title}</h3>
+                                <span class="qualification-subtitle">${item.subtitle}</span>
+                                <div class="qualification-calendar">
+                                    <i class="bx bxs-calendar"></i>
+                                    ${item.calendar}
+                                </div>
+                            </div>
+                            ` : `
+                            <div></div>
+                            `}
+                        `;
+                        container.appendChild(div);
+                    });
+                });
+            }
+
+            document.addEventListener('DOMContentLoaded', loadQualifications);
+        </script>
         <!--END SUB-SECTION-->
 
         <!--#region EXPERIENCES-->
@@ -553,203 +411,122 @@
             <h2 class="section__title">Experience</h2>
             <span class="section__subtitle">My abilities</span>
 
-            <div class="experiences__container container grid">
-                <div class="experiences__content">
-                    <h3 class="experiences__title">Software Engineer</h3>
-                    <h5 class="experiences__subtitle">Zeiss - India</h5>
-                    <div class="experiences__box">
-                        <div class="experiences__data">
-                            <i class='bx bxs-badge-check'></i>
-                            <div>
-                                <h3 class="experiences__name">Languages</h3>
-                                <span class="experiences__level">C#, JavaScript, TypeScript</span>
-                            </div>
-                        </div>
-
-                        <div class="experiences__data">
-                            <i class='bx bxs-badge-check'></i>
-                            <div>
-                                <h3 class="experiences__name">Web Development</h3>
-                                <span class="experiences__level">React, Next.js, Node.js, Tailwind CSS</span>
-                            </div>
-                        </div>
-
-                        <div class="experiences__data">
-                            <i class='bx bxs-badge-check'></i>
-                            <div>
-                                <h3 class="experiences__name">Backend Development</h3>
-                                <span class="experiences__level">ASP.NET, .NET Core, Entity Framework<span>
-                            </div>
-                        </div>
-                        <div class="experiences__data">
-                            <i class='bx bxs-badge-check'></i>
-                            <div>
-                                <h3 class="experiences__name">Microservice Communication</h3>
-                                <span class="experiences__level">REST API, RabbitMQ, gRPC<span>
-                            </div>
-                        </div>
-
-                        <div class="experiences__data">
-                            <i class='bx bxs-badge-check'></i>
-                            <div>
-                                <h3 class="experiences__name">Database</h3>
-                                <span class="experiences__level">MS SQL, SSMS, MongoDB</span>
-                            </div>
-                        </div>
-
-                        <div class="experiences__data">
-                            <i class='bx bxs-badge-check'></i>
-                            <div>
-                                <h3 class="experiences__name">Cloud Infrastructure</h3>
-                                <span class="experiences__level">Microsoft Azure</span>
-                            </div>
-                        </div>
-                        <div class="experiences__data">
-                            <i class='bx bxs-badge-check'></i>
-                            <div>
-                                <h3 class="experiences__name">Internal Tools</h3>
-                                <span class="experiences__level">Zeiss ID, Global Mail API<span>
-                            </div>
-                        </div>
-
-                        <div class="experiences__data">
-                            <i class='bx bxs-badge-check'></i>
-                            <div>
-                                <h3 class="experiences__name">Version Control</h3>
-                                <span class="experiences__level">Git, Azure DevOps</span>
-                            </div>
-                        </div>
-
-                        <div class="experiences__data">
-                            <i class='bx bxs-badge-check'></i>
-                            <div>
-                                <h3 class="experiences__name">API Documentation</h3>
-                                <span class="experiences__level">Postman, Swagger</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="experiences__content">
-                    <h3 class="experiences__title">Full Stack Developer</h3>
-                    <h5 class="experiences__subtitle">Hackerearth</h5>
-                    <div class="experiences__box">
-                            <div class="experiences__data">
-                                <i class='bx bxs-badge-check'></i>
-                                <div>
-                                    <h3 class="experiences__name">Languages</h3>
-                                    <span class="experiences__level">Python, JavaScript</span>
-                                </div>
-                            </div>
-
-                            <div class="experiences__data">
-                                <i class='bx bxs-badge-check'></i>
-                                <div>
-                                    <h3 class="experiences__name">Frameworks</h3>
-                                    <span class="experiences__level">jQuery, Django, FastAPI</span>
-                                </div>
-                            </div>
-                            <div class="experiences__data">
-                                <i class='bx bxs-badge-check'></i>
-                                <div>
-                                    <h3 class="experiences__name">Database</h3>
-                                    <span class="experiences__level">SQL, MongoDB<span>
-                                </div>
-                            </div>
-
-                            <div class="experiences__data">
-                                <i class='bx bxs-badge-check'></i>
-                                <div>
-                                    <h3 class="experiences__name">Internal Tools</h3>
-                                    <span class="experiences__level">Code Checker, Code Factory Server</span>
-                                </div>
-                            </div>
-                            <div class="experiences__data">
-                                <i class='bx bxs-badge-check'></i>
-                                <div>
-                                    <h3 class="experiences__name">Cloud Infrastructure</h3>
-                                    <span class="experiences__level">AWS<span>
-                                </div>
-                            </div>
-
-                            <div class="experiences__data">
-                                <i class='bx bxs-badge-check'></i>
-                                <div>
-                                    <h3 class="experiences__name">Tools and Platform</h3>
-                                    <span class="experiences__level">Linux, Docker, Bash Script</span>
-                                </div>
-                            </div>
-                    </div>
-                </div>
+            <div class="experiences__container container grid" id="experiences-container">
+            <!-- Experience items will be injected by JavaScript -->
             </div>
         </section>
+
+        <script>
+            const experiences = [
+            {
+                title: "Software Engineer",
+                subtitle: "Zeiss - India",
+                details: [
+                { name: "Languages", level: "C#, JavaScript, TypeScript" },
+                { name: "Web Development", level: "React, Next.js, Node.js, Tailwind CSS" },
+                { name: "Backend Development", level: "ASP.NET, .NET Core, Entity Framework" },
+                { name: "Microservice Communication", level: "REST API, RabbitMQ, gRPC" },
+                { name: "Database", level: "MS SQL, SSMS, MongoDB" },
+                { name: "Cloud Infrastructure", level: "Microsoft Azure" },
+                { name: "Internal Tools", level: "Zeiss ID, Global Mail API" },
+                { name: "Version Control", level: "Git, Azure DevOps" },
+                { name: "API Documentation", level: "Postman, Swagger" }
+                ]
+            },
+            {
+                title: "Full Stack Developer",
+                subtitle: "Hackerearth",
+                details: [
+                { name: "Languages", level: "Python, JavaScript" },
+                { name: "Frameworks", level: "jQuery, Django, FastAPI" },
+                { name: "Database", level: "SQL, MongoDB" },
+                { name: "Internal Tools", level: "Code Checker, Code Factory Server" },
+                { name: "Cloud Infrastructure", level: "AWS" },
+                { name: "Tools and Platform", level: "Linux, Docker, Bash Script" }
+                ]
+            }
+            ];
+
+            const experiencesContainer = document.getElementById('experiences-container');
+            experiences.forEach(exp => {
+            const expContent = document.createElement('div');
+            expContent.classList.add('experiences__content');
+            expContent.innerHTML = `
+                <h3 class="experiences__title">${exp.title}</h3>
+                <h5 class="experiences__subtitle">${exp.subtitle}</h5>
+                <div class="experiences__box">
+                ${exp.details.map(detail => `
+                    <div class="experiences__data">
+                    <i class='bx bxs-badge-check'></i>
+                    <div>
+                        <h3 class="experiences__name">${detail.name}</h3>
+                        <span class="experiences__level">${detail.level}</span>
+                    </div>
+                    </div>
+                `).join('')}
+                </div>
+            `;
+            experiencesContainer.appendChild(expContent);
+            });
+        </script>
         <!--endregion-->
 
         <!-- #region SERVICES -->
-        <!-- <section class="services section">
-
+        <section class="services section">
             <span class="section__subtitle">My Service</span>
             <h2 class="section__title">What I Offer</h2>
+            <div class="services__container container grid" id="services-container">
+                <!-- Services items will be injected by JavaScript -->
+            </div>
+        </section>
 
-            <div class="services__container container grid">
-                <div class="services__card">
-                    <h3 class="services__title"></h3>
+        <script>
+            const services = [
+                {
+                    title: "Service 1",
+                    description: "Description for service 1",
+                    details: ["Detail 1", "Detail 2", "Detail 3"]
+                },
+                {
+                    title: "Service 2",
+                    description: "Description for service 2",
+                    details: ["Detail 1", "Detail 2", "Detail 3"]
+                },
+                {
+                    title: "Service 3",
+                    description: "Description for service 3",
+                    details: ["Detail 1", "Detail 2", "Detail 3"]
+                }
+            ];
 
+            const servicesContainer = document.getElementById('services-container');
+            services.forEach(service => {
+                const serviceCard = document.createElement('div');
+                serviceCard.classList.add('services__card');
+                serviceCard.innerHTML = `
+                    <h3 class="services__title">${service.title}</h3>
                     <span class="services__button">
                         See more <i class="bx bx-right-arrow-alt services__icon"></i>
                     </span>
-
                     <div class="services__modal">
                         <div class="services__modal-content">
                             <i class="bx bx-x services__modal-close"></i>
-
-                            <h3 class="services__modal-title">kkok</h3>
-                            <p class="services__modal-description">
-                                dfjsijfiosfsdhf dhifhosihdfhs
-                            </p>
-
+                            <h3 class="services__modal-title">${service.title}</h3>
+                            <p class="services__modal-description">${service.description}</p>
                             <ul class="services__modal-list">
-                                <li class="services__modal-item">
-                                    <i class="bx bx-check services__modal-icon"></i>
-                                    <p class="services__modal-info">
-                                        kdgkokdfog
-                                    </p>
-                                </li>
-
-                                <li class="services__modal-item">
-                                    <i class="bx bx-check services__modal-icon"></i>
-                                    <p class="services__modal-info">
-                                        kdgkokdfog
-                                    </p>
-                                </li>
-
-                                <li class="services__modal-item">
-                                    <i class="bx bx-check services__modal-icon"></i>
-                                    <p class="services__modal-info">
-                                        kdgkokdfog
-                                    </p>
-                                </li>
+                                ${service.details.map(detail => `
+                                    <li class="services__modal-item">
+                                        <i class="bx bx-check services__modal-icon"></i>
+                                        <p class="services__modal-info">${detail}</p>
+                                    </li>
+                                `).join('')}
                             </ul>
                         </div>
                     </div>
-                </div>
-
-                <div class="services__card">
-                    <h3 class="services__title"></h3>
-
-                    <span class="services__button">
-                        See more <i class="bx bx-right-arrow-alt services__icon"></i>
-                    </span>
-                </div>
-
-                <div class="services__card">
-                    <h3 class="services__title"></h3>
-
-                    <span class="services__button">
-                        See more <i class="bx bx-right-arrow-alt services__icon"></i>
-                    </span>
-                </div>
-            </div>
-        </section> -->
+                `;
+                servicesContainer.appendChild(serviceCard);
+            });
+        </script>
         <!--endregion -->
 
         <!--#region WORK -->
@@ -764,107 +541,75 @@
                 <span class="work__item" data-filter='.blockchain'>Blockchain</span>
             </div>
 
-            <div class="work__container container grid">
-
-                <div class="work__card mix web">
-                    <img id="resource_management" src="./assets/img/work1-d.png" alt="" class="work__img">
-                    <h3 class="work__title">Resource Management System</h3>
-                    <a href="https://rms-portal.azurewebsites.net"
-                        target="_blank" class="work__button">
-                        Visit <i class="bx bx-right-arrow-alt work__icon"></i>
-                    </a>
-                </div>
-
-                <div class="work__card mix web">
-                    <img id="os_algorithm_simulator" src="./assets/img/work5-d.png" alt="" class="work__img">
-                    <h3 class="work__title">OS Algorithms Visualizer</h3>
-                    <a href="https://github.com/amulyavarshney/OS-Algorithm-Visualizer"
-                        target="_blank" class="work__button">
-                        Visit <i class="bx bx-right-arrow-alt work__icon"></i>
-                    </a>
-                </div>
-
-                <div class="work__card mix backend">
-                    <img id="Book_Catalog" src="./assets/img/work2-d.png" alt="" class="work__img">
-                    <h3 class="work__title">Book Catalog Microservice</h3>
-                    <a href="https://github.com/amulyavarshney/AspNetCore6.Microservices.BookCatalog"
-                        target="_blank" class="work__button">
-                        Visit <i class="bx bx-right-arrow-alt work__icon"></i>
-                    </a>
-                </div>
-
-                <div class="work__card mix web">
-                    <img id="C_Share" src="./assets/img/work3-d.png" alt="" class="work__img">
-                    <h3 class="work__title">C Share</h3>
-                    <a href="https://github.com/amulyavarshney/C-Share"
-                        target="_blank" class="work__button">
-                        Visit <i class="bx bx-right-arrow-alt work__icon"></i>
-                    </a>
-                </div>
-
-                <div class="work__card mix blockchain">
-                    <img id="onchain_doc_editor" src="./assets/img/work7-d.png" alt="" class="work__img">
-                    <h3 class="work__title">Onchain Doc Editor</h3>
-                    <a href="https://github.com/amulyavarshney/Dynamic-Storage-Auditing-In-Blockchain" target="_blank" class="work__button">
-                        Visit <i class="bx bx-right-arrow-alt work__icon"></i>
-                    </a>
-                </div>
-
-                <div class="work__card mix web">
-                    <img id="music_visualizer" src="./assets/img/work4-d.png" alt="" class="work__img">
-                    <h3 class="work__title">Login and Authentication App</h3>
-                    <a href="https://github.com/amulyavarshney/Authentication-Page"
-                        target="_blank" class="work__button">
-                        Visit <i class="bx bx-right-arrow-alt work__icon"></i>
-                    </a>
-                </div>
+            <div class="work__container container grid" id="work-container">
+                <!-- Work items will be injected by JavaScript -->
             </div>
         </section>
+
+        <script>
+            const works = [
+                {
+                    category: 'web',
+                    imgSrc: './assets/img/work1-d.png',
+                    title: 'Resource Management System',
+                    link: 'https://rms-portal.azurewebsites.net'
+                },
+                {
+                    category: 'web',
+                    imgSrc: './assets/img/work5-d.png',
+                    title: 'OS Algorithms Visualizer',
+                    link: 'https://github.com/amulyavarshney/OS-Algorithm-Visualizer'
+                },
+                {
+                    category: 'backend',
+                    imgSrc: './assets/img/work2-d.png',
+                    title: 'Book Catalog Microservice',
+                    link: 'https://github.com/amulyavarshney/AspNetCore6.Microservices.BookCatalog'
+                },
+                {
+                    category: 'web',
+                    imgSrc: './assets/img/work3-d.png',
+                    title: 'C Share',
+                    link: 'https://github.com/amulyavarshney/C-Share'
+                },
+                {
+                    category: 'blockchain',
+                    imgSrc: './assets/img/work7-d.png',
+                    title: 'Onchain Doc Editor',
+                    link: 'https://github.com/amulyavarshney/Dynamic-Storage-Auditing-In-Blockchain'
+                },
+                {
+                    category: 'web',
+                    imgSrc: './assets/img/work4-d.png',
+                    title: 'Login and Authentication App',
+                    link: 'https://github.com/amulyavarshney/Authentication-Page'
+                }
+            ];
+
+            const workContainer = document.getElementById('work-container');
+            works.forEach(work => {
+                const workCard = document.createElement('div');
+                workCard.classList.add('work__card', 'mix', work.category);
+                workCard.innerHTML = `
+                    <img src="${work.imgSrc}" alt="" class="work__img">
+                    <h3 class="work__title">${work.title}</h3>
+                    <a href="${work.link}" target="_blank" class="work__button">
+                        Visit <i class="bx bx-right-arrow-alt work__icon"></i>
+                    </a>
+                `;
+                workContainer.appendChild(workCard);
+            });
+        </script>
         <!--endregion-->
 
         <!--#region BLOGS -->
-        <!-- <section class="blog section" id="blogs">
+        <section class="blog section" id="blogs">
             <h2 class="section__title">Blogs</h2>
             <span class="section__subtitle">Most Recent Work</span>
 
             <div class="portfolio-container container swiper">
-                <div class="swiper-wrapper">
-
-                    <div class="portfolio-content grid swiper-slide">
-                        <img src="assets/img/portfolio1.jpg" alt="Portfolio" class="portfolio-img">
-                        <div class="portfolio-data">
-                            <h3 class="portfolio-title">Modern Website</h3>
-                            <p class="portfolio-description">Website adaptable to all devices, with ui components and
-                                animated interactions.</p>
-                            <a href="#" class="button button-flex button-small portfolio-button">
-                                Read <i class="bx bx-right-arrow-alt button-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-content grid swiper-slide">
-                        <img src="assets/img/portfolio2.jpg" alt="Portfolio" class="portfolio-img">
-                        <div class="portfolio-data">
-                            <h3 class="portfolio-title">Brand Design</h3>
-                            <p class="portfolio-description">Website adaptable to all devices, with ui components and
-                                animated interactions.</p>
-                            <a href="#" class="button button-flex button-small portfolio-button">
-                                Read <i class="bx bx-right-arrow-alt button-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-content grid swiper-slide">
-                        <img src="assets/img/portfolio3.jpg" alt="Portfolio" class="portfolio-img">
-                        <div class="portfolio-data">
-                            <h3 class="portfolio-title">Online Store</h3>
-                            <p class="portfolio-description">Website adaptable to all devices, with ui components and
-                                animated interactions.</p>
-                            <a href="#" class="button button-flex button-small portfolio-button">
-                                Read <i class="bx bx-right-arrow-alt button-icon"></i>
-                            </a>
-                        </div>
-                    </div>
+                <div class="swiper-wrapper" id="blog-container">
+                    <!-- Blog items will be injected by JavaScript -->
                 </div>
 
                 <div class="swiper-button-next">
@@ -876,43 +621,84 @@
 
                 <div class="swiper-pagination"></div>
             </div>
-        </section> -->
+        </section>
+
+        <script>
+            const blogs = [
+                {
+                    imgSrc: 'assets/img/portfolio1.jpg',
+                    title: 'Modern Website',
+                    description: 'Website adaptable to all devices, with ui components and animated interactions.',
+                    link: '#'
+                },
+                {
+                    imgSrc: 'assets/img/portfolio2.jpg',
+                    title: 'Brand Design',
+                    description: 'Website adaptable to all devices, with ui components and animated interactions.',
+                    link: '#'
+                },
+                {
+                    imgSrc: 'assets/img/portfolio3.jpg',
+                    title: 'Online Store',
+                    description: 'Website adaptable to all devices, with ui components and animated interactions.',
+                    link: '#'
+                }
+            ];
+
+            const blogContainer = document.getElementById('blog-container');
+            blogs.forEach(blog => {
+                const blogContent = document.createElement('div');
+                blogContent.classList.add('portfolio-content', 'grid', 'swiper-slide');
+                blogContent.innerHTML = `
+                    <img src="${blog.imgSrc}" alt="Portfolio" class="portfolio-img">
+                    <div class="portfolio-data">
+                        <h3 class="portfolio-title">${blog.title}</h3>
+                        <p class="portfolio-description">${blog.description}</p>
+                        <a href="${blog.link}" class="button button-flex button-small portfolio-button">
+                            Read <i class="bx bx-right-arrow-alt button-icon"></i>
+                        </a>
+                    </div>
+                `;
+                blogContainer.appendChild(blogContent);
+            });
+        </script>
         <!--endregion-->
 
         <!--#region TESTIMONIALS -->
-        <!-- <section class="testimonial section">
+        <section class="testimonial section">
             <h2 class="section__title">Testimonial</h2>
             <span class="section__subtitle">My Client</span>
 
             <div class="testimonial__container container swiper">
-                <div class="swiper-wrapper">
-                    <div class="testimonial__card swiper-slide">
-                        <img src="./assets/img/testimonial1.png" alt="" class="testimonial__img">
-                        <h3 class="testimonial__name">none</h3>
-                        <p class="testimonial__description">
-                            none
-                        </p>
-                    </div>
-
-                    <div class="testimonial__card swiper-slide">
-                        <img src="./assets/img/testimonial2.png" alt="" class="testimonial__img">
-                        <h3 class="testimonial__name">none</h3>
-                        <p class="testimonial__description">
-                            none
-                        </p>
-                    </div>
-
-                    <div class="testimonial__card swiper-slide">
-                        <img src="./assets/img/testimonial3.png" alt="" class="testimonial__img">
-                        <h3 class="testimonial__name">none</h3>
-                        <p class="testimonial__description">
-                            none
-                        </p>
-                    </div>
+                <div class="swiper-wrapper" id="testimonial-container">
+                    <!-- Testimonial items will be injected by JavaScript -->
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
-        </section> -->
+        </section>
+
+        <script>
+            const testimonials = [
+                { imgSrc: './assets/img/testimonial1.png', name: 'none', description: 'none' },
+                { imgSrc: './assets/img/testimonial2.png', name: 'none', description: 'none' },
+                { imgSrc: './assets/img/testimonial3.png', name: 'none', description: 'none' },
+                { imgSrc: './assets/img/testimonial1.png', name: 'none', description: 'none' },
+                { imgSrc: './assets/img/testimonial2.png', name: 'none', description: 'none' },
+                { imgSrc: './assets/img/testimonial3.png', name: 'none', description: 'none' }
+            ];
+
+            const testimonialContainer = document.getElementById('testimonial-container');
+            testimonials.forEach(testimonial => {
+                const testimonialCard = document.createElement('div');
+                testimonialCard.classList.add('testimonial__card', 'swiper-slide');
+                testimonialCard.innerHTML = `
+                    <img src="${testimonial.imgSrc}" alt="" class="testimonial__img">
+                    <h3 class="testimonial__name">${testimonial.name}</h3>
+                    <p class="testimonial__description">${testimonial.description}</p>
+                `;
+                testimonialContainer.appendChild(testimonialCard);
+            });
+        </script>
         <!--endregion-->
 
         <!--#region CONTACT -->
@@ -929,7 +715,6 @@
                             <i class="bx bxl-gmail contact__card-icon"></i>
                             <h3 class="contact__card-title">Email</h3>
                             <span class="contact__card-data">amulyavarshney7@gmail.com</span>
-
                             <a href="mailto:amulyavarshney7@gmail.com" target="_blank" class="contact__button">
                                 Write me <i class="bx bx-right-arrow-alt contact__button-icon"></i>
                             </a>
@@ -937,9 +722,8 @@
 
                         <div class="contact__card">
                             <i class='bx bxl-linkedin-square contact__card-icon'></i>
-                            <h3 class="contact__card-title">Linkedin</h3>
+                            <h3 class="contact__card-title">LinkedIn</h3>
                             <span class="contact__card-data">https://www.linkedin.com/in/varamu/</span>
-
                             <a href="https://www.linkedin.com/in/varamu/" target="_blank" class="contact__button">
                                 Write me <i class="bx bx-right-arrow-alt contact__button-icon"></i>
                             </a>
@@ -949,9 +733,7 @@
                             <i class="bx bxl-twitter contact__card-icon"></i>
                             <h3 class="contact__card-title">Twitter</h3>
                             <span class="contact__card-data">https://twitter.com/amulya_varshney</span>
-
-                            <a href="https://twitter.com/amulya_varshney" target="_blank" class="contact__button"
-                                aria-current="page">
+                            <a href="https://twitter.com/amulya_varshney" target="_blank" class="contact__button">
                                 Write <i class="bx bx-right-arrow-alt contact__button-icon"></i>
                             </a>
                         </div>
@@ -963,28 +745,23 @@
 
                     <form class="contact__form">
                         <div class="contact__form-div">
-                            <label for="" class="contact__form-tag">Name</label>
-                            <input id="client_name" type="text" placeholder="Enter your Name"
-                                class="contact__form-input">
+                            <label for="client_name" class="contact__form-tag">Name</label>
+                            <input id="client_name" type="text" placeholder="Enter your Name" class="contact__form-input">
                         </div>
                         <div class="contact__form-div">
-                            <label for="" class="contact__form-tag">Email Address</label>
-                            <input id="client_email" type="email" placeholder="Enter your Email Address"
-                                class="contact__form-input">
+                            <label for="client_email" class="contact__form-tag">Email Address</label>
+                            <input id="client_email" type="email" placeholder="Enter your Email Address" class="contact__form-input">
                         </div>
                         <div class="contact__form-div">
-                            <label for="" class="contact__form-tag">Subject</label>
-                            <input id="client_subject" type="text" placeholder="Enter the Subject"
-                                class="contact__form-input">
+                            <label for="client_subject" class="contact__form-tag">Subject</label>
+                            <input id="client_subject" type="text" placeholder="Enter the Subject" class="contact__form-input">
                         </div>
                         <div class="contact__form-div contact__form-area">
-                            <label for="" class="contact__form-tag">Message</label>
-                            <textarea id="client_message" cols="30" rows="10" placeholder="Write your Message here"
-                                class="contact__form-input"></textarea>
+                            <label for="client_message" class="contact__form-tag">Message</label>
+                            <textarea id="client_message" cols="30" rows="10" placeholder="Write your Message here" class="contact__form-input"></textarea>
                         </div>
 
-                        <button type="submit" id="send_email" class="button">Send Message <i
-                                class='bx bxl-send'></i></button>
+                        <button type="submit" id="send_email" class="button">Send Message <i class='bx bxl-send'></i></button>
                     </form>
                 </div>
             </div>
