@@ -41,27 +41,6 @@
     </header>
     <!--endregion-->
 
-    <script>
-        const navItems = [
-            { href: "#home", icon: "bxs-home" },
-            { href: "#skills", icon: "bxs-book-open" },
-            { href: "#qualifications", icon: "bxs-school" },
-            { href: "#experiences", icon: "bxs-briefcase-alt" },
-            { href: "#works", icon: "bx-task" },
-            { href: "#blogs", icon: "bxs-bookmark" },
-            { href: "#testimonial", icon: "bxs-user" },
-            { href: "#contact", icon: "bxs-message-square-detail" }
-        ];
-
-        const navList = document.getElementById('nav-list');
-        navItems.forEach(item => {
-            const li = document.createElement('li');
-            li.classList.add('nav__item');
-            li.innerHTML = `<a href="${item.href}" class="nav__link"><i class='bx ${item.icon}'></i></a>`;
-            navList.appendChild(li);
-        });
-    </script>
-
     <!--#region MAIN-->
     <main class="main">
 
@@ -343,67 +322,6 @@
                 </div>
             </div>
         </section>
-
-        <script>
-            const qualifications = {
-                education: [
-                    { title: "B.Tech in CSE", subtitle: "IIIT - Naya Raipur", calendar: "2019 - 2023" },
-                    { title: "Professional Diploma", subtitle: "HBTU Kanpur", calendar: "2018 - 2019" },
-                    { title: "Intermediate School", subtitle: "K. H. M. C. Bahjoi", calendar: "2015 - 2017" },
-                    { title: "High School", subtitle: "S. H. C. S. Chandausi", calendar: "2013 - 2015" }
-                ],
-                work: [
-                    { title: "Software Engineer", subtitle: "Zeiss - India", calendar: "Jul 2023 - Present" },
-                    { title: "Software Engineer Intern", subtitle: "Zeiss - India", calendar: "Jan 2023 - Jun 2023" },
-                    { title: "Full Stack Developer Intern", subtitle: "Hackerearth - India", calendar: "Mar 2022 - Dec 2022" },
-                    { title: "R&D Intern", subtitle: "Samsung R&D Institute (SRI-B)", calendar: "Aug 2021 - Feb 2022" },
-                    { title: "SDE Intern", subtitle: "DataChannel - India", calendar: "Mar 2021 - Jun 2021" }
-                ]
-            };
-
-            function loadQualifications() {
-                Object.keys(qualifications).forEach(key => {
-                    const container = document.getElementById(key);
-                    qualifications[key].forEach((item, index) => {
-                        const div = document.createElement('div');
-                        div.classList.add('qualification-data');
-                        div.innerHTML = `
-                            ${index % 2 === 0 ? `
-                            <div class="qualification-data-alt">
-                                <h3 class="qualification-title">${item.title}</h3>
-                                <span class="qualification-subtitle">${item.subtitle}</span>
-                                <div class="qualification-calendar">
-                                    <i class="bx bxs-calendar"></i>
-                                    ${item.calendar}
-                                </div>
-                            </div>
-                            ` : `
-                            <div></div>
-                            `}
-                            <div>
-                                <span class="qualification-rounder"></span>
-                                ${index !== qualifications[key].length - 1 ? `<span class="qualification-line"></span>` : ``}
-                            </div>
-                            ${index % 2 !== 0 ? `
-                            <div class="qualification-data-alt">
-                                <h3 class="qualification-title">${item.title}</h3>
-                                <span class="qualification-subtitle">${item.subtitle}</span>
-                                <div class="qualification-calendar">
-                                    <i class="bx bxs-calendar"></i>
-                                    ${item.calendar}
-                                </div>
-                            </div>
-                            ` : `
-                            <div></div>
-                            `}
-                        `;
-                        container.appendChild(div);
-                    });
-                });
-            }
-
-            document.addEventListener('DOMContentLoaded', loadQualifications);
-        </script>
         <!--END SUB-SECTION-->
 
         <!--#region EXPERIENCES-->
@@ -415,60 +333,6 @@
             <!-- Experience items will be injected by JavaScript -->
             </div>
         </section>
-
-        <script>
-            const experiences = [
-            {
-                title: "Software Engineer",
-                subtitle: "Zeiss - India",
-                details: [
-                { name: "Languages", level: "C#, JavaScript, TypeScript" },
-                { name: "Web Development", level: "React, Next.js, Node.js, Tailwind CSS" },
-                { name: "Backend Development", level: "ASP.NET, .NET Core, Entity Framework" },
-                { name: "Microservice Communication", level: "REST API, RabbitMQ, gRPC" },
-                { name: "Database", level: "MS SQL, SSMS, MongoDB" },
-                { name: "Cloud Infrastructure", level: "Microsoft Azure" },
-                { name: "Internal Tools", level: "Zeiss ID, Global Mail API" },
-                { name: "Version Control", level: "Git, Azure DevOps" },
-                { name: "API Documentation", level: "Postman, Swagger" }
-                ]
-            },
-            {
-                title: "Full Stack Developer",
-                subtitle: "Hackerearth",
-                details: [
-                { name: "Languages", level: "Python, JavaScript" },
-                { name: "Frameworks", level: "jQuery, Django, FastAPI" },
-                { name: "Database", level: "SQL, MongoDB" },
-                { name: "Internal Tools", level: "Code Checker, Code Factory Server" },
-                { name: "Cloud Infrastructure", level: "AWS" },
-                { name: "Tools and Platform", level: "Linux, Docker, Bash Script" }
-                ]
-            }
-            ];
-
-            const experiencesContainer = document.getElementById('experiences-container');
-            experiences.forEach(exp => {
-            const expContent = document.createElement('div');
-            expContent.classList.add('experiences__content');
-            expContent.innerHTML = `
-                <h3 class="experiences__title">${exp.title}</h3>
-                <h5 class="experiences__subtitle">${exp.subtitle}</h5>
-                <div class="experiences__box">
-                ${exp.details.map(detail => `
-                    <div class="experiences__data">
-                    <i class='bx bxs-badge-check'></i>
-                    <div>
-                        <h3 class="experiences__name">${detail.name}</h3>
-                        <span class="experiences__level">${detail.level}</span>
-                    </div>
-                    </div>
-                `).join('')}
-                </div>
-            `;
-            experiencesContainer.appendChild(expContent);
-            });
-        </script>
         <!--endregion-->
 
         <!-- #region SERVICES -->
@@ -479,54 +343,6 @@
                 <!-- Services items will be injected by JavaScript -->
             </div>
         </section>
-
-        <script>
-            const services = [
-                {
-                    title: "Service 1",
-                    description: "Description for service 1",
-                    details: ["Detail 1", "Detail 2", "Detail 3"]
-                },
-                {
-                    title: "Service 2",
-                    description: "Description for service 2",
-                    details: ["Detail 1", "Detail 2", "Detail 3"]
-                },
-                {
-                    title: "Service 3",
-                    description: "Description for service 3",
-                    details: ["Detail 1", "Detail 2", "Detail 3"]
-                }
-            ];
-
-            const servicesContainer = document.getElementById('services-container');
-            services.forEach(service => {
-                const serviceCard = document.createElement('div');
-                serviceCard.classList.add('services__card');
-                serviceCard.innerHTML = `
-                    <h3 class="services__title">${service.title}</h3>
-                    <span class="services__button">
-                        See more <i class="bx bx-right-arrow-alt services__icon"></i>
-                    </span>
-                    <div class="services__modal">
-                        <div class="services__modal-content">
-                            <i class="bx bx-x services__modal-close"></i>
-                            <h3 class="services__modal-title">${service.title}</h3>
-                            <p class="services__modal-description">${service.description}</p>
-                            <ul class="services__modal-list">
-                                ${service.details.map(detail => `
-                                    <li class="services__modal-item">
-                                        <i class="bx bx-check services__modal-icon"></i>
-                                        <p class="services__modal-info">${detail}</p>
-                                    </li>
-                                `).join('')}
-                            </ul>
-                        </div>
-                    </div>
-                `;
-                servicesContainer.appendChild(serviceCard);
-            });
-        </script>
         <!--endregion -->
 
         <!--#region WORK -->
@@ -545,61 +361,6 @@
                 <!-- Work items will be injected by JavaScript -->
             </div>
         </section>
-
-        <script>
-            const works = [
-                {
-                    category: 'web',
-                    imgSrc: './assets/img/work1-d.png',
-                    title: 'Resource Management System',
-                    link: 'https://rms-portal.azurewebsites.net'
-                },
-                {
-                    category: 'web',
-                    imgSrc: './assets/img/work5-d.png',
-                    title: 'OS Algorithms Visualizer',
-                    link: 'https://github.com/amulyavarshney/OS-Algorithm-Visualizer'
-                },
-                {
-                    category: 'backend',
-                    imgSrc: './assets/img/work2-d.png',
-                    title: 'Book Catalog Microservice',
-                    link: 'https://github.com/amulyavarshney/AspNetCore6.Microservices.BookCatalog'
-                },
-                {
-                    category: 'web',
-                    imgSrc: './assets/img/work3-d.png',
-                    title: 'C Share',
-                    link: 'https://github.com/amulyavarshney/C-Share'
-                },
-                {
-                    category: 'blockchain',
-                    imgSrc: './assets/img/work7-d.png',
-                    title: 'Onchain Doc Editor',
-                    link: 'https://github.com/amulyavarshney/Dynamic-Storage-Auditing-In-Blockchain'
-                },
-                {
-                    category: 'web',
-                    imgSrc: './assets/img/work4-d.png',
-                    title: 'Login and Authentication App',
-                    link: 'https://github.com/amulyavarshney/Authentication-Page'
-                }
-            ];
-
-            const workContainer = document.getElementById('work-container');
-            works.forEach(work => {
-                const workCard = document.createElement('div');
-                workCard.classList.add('work__card', 'mix', work.category);
-                workCard.innerHTML = `
-                    <img src="${work.imgSrc}" alt="" class="work__img">
-                    <h3 class="work__title">${work.title}</h3>
-                    <a href="${work.link}" target="_blank" class="work__button">
-                        Visit <i class="bx bx-right-arrow-alt work__icon"></i>
-                    </a>
-                `;
-                workContainer.appendChild(workCard);
-            });
-        </script>
         <!--endregion-->
 
         <!--#region BLOGS -->
@@ -622,46 +383,6 @@
                 <div class="swiper-pagination"></div>
             </div>
         </section>
-
-        <script>
-            const blogs = [
-                {
-                    imgSrc: 'assets/img/portfolio1.jpg',
-                    title: 'Modern Website',
-                    description: 'Website adaptable to all devices, with ui components and animated interactions.',
-                    link: '#'
-                },
-                {
-                    imgSrc: 'assets/img/portfolio2.jpg',
-                    title: 'Brand Design',
-                    description: 'Website adaptable to all devices, with ui components and animated interactions.',
-                    link: '#'
-                },
-                {
-                    imgSrc: 'assets/img/portfolio3.jpg',
-                    title: 'Online Store',
-                    description: 'Website adaptable to all devices, with ui components and animated interactions.',
-                    link: '#'
-                }
-            ];
-
-            const blogContainer = document.getElementById('blog-container');
-            blogs.forEach(blog => {
-                const blogContent = document.createElement('div');
-                blogContent.classList.add('portfolio-content', 'grid', 'swiper-slide');
-                blogContent.innerHTML = `
-                    <img src="${blog.imgSrc}" alt="Portfolio" class="portfolio-img">
-                    <div class="portfolio-data">
-                        <h3 class="portfolio-title">${blog.title}</h3>
-                        <p class="portfolio-description">${blog.description}</p>
-                        <a href="${blog.link}" class="button button-flex button-small portfolio-button">
-                            Read <i class="bx bx-right-arrow-alt button-icon"></i>
-                        </a>
-                    </div>
-                `;
-                blogContainer.appendChild(blogContent);
-            });
-        </script>
         <!--endregion-->
 
         <!--#region TESTIMONIALS -->
@@ -676,29 +397,6 @@
                 <div class="swiper-pagination"></div>
             </div>
         </section>
-
-        <script>
-            const testimonials = [
-                { imgSrc: './assets/img/testimonial1.png', name: 'none', description: 'none' },
-                { imgSrc: './assets/img/testimonial2.png', name: 'none', description: 'none' },
-                { imgSrc: './assets/img/testimonial3.png', name: 'none', description: 'none' },
-                { imgSrc: './assets/img/testimonial1.png', name: 'none', description: 'none' },
-                { imgSrc: './assets/img/testimonial2.png', name: 'none', description: 'none' },
-                { imgSrc: './assets/img/testimonial3.png', name: 'none', description: 'none' }
-            ];
-
-            const testimonialContainer = document.getElementById('testimonial-container');
-            testimonials.forEach(testimonial => {
-                const testimonialCard = document.createElement('div');
-                testimonialCard.classList.add('testimonial__card', 'swiper-slide');
-                testimonialCard.innerHTML = `
-                    <img src="${testimonial.imgSrc}" alt="" class="testimonial__img">
-                    <h3 class="testimonial__name">${testimonial.name}</h3>
-                    <p class="testimonial__description">${testimonial.description}</p>
-                `;
-                testimonialContainer.appendChild(testimonialCard);
-            });
-        </script>
         <!--endregion-->
 
         <!--#region CONTACT -->
@@ -813,6 +511,7 @@
     </a>
 
     <!--#region JS -->
+    <script type="module" src="script.js"></script>
     <script src="./external/js/scrollreveal.js"></script>
     <script src="./external/js/swiper-bundle.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
