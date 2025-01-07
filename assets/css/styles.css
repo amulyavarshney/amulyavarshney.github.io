@@ -726,6 +726,8 @@ s .skills-container .skills-css {
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
   cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
 }
 
 .qualification-tabs-button:hover {

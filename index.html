@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="assets/img/logo.ico" type="image/x-icon">
 
     <!--------------------- BOXICONS --------------------->
-    <link href='./external/boxicons-2.1.1/css/boxicons.css' rel='stylesheet'>
+    <link href='./external/boxicons-2.1.4/css/boxicons.css' rel='stylesheet'>
 
     <!--------------------- SWIPER CSS --------------------->
     <link rel="stylesheet" href="./external/css/swiper-bundle.css">
@@ -25,7 +25,9 @@
     <!--#region HEADER-->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="https://github.com/amulyavarshney" class="nav__logo">Amulya</a>
+            <a href="https://github.com/amulyavarshney" class="nav__logo">
+                <image width="30" height="30" src="./assets/img/logo.ico" alt="Logo" class="nav__logo-img">
+            </a>
             <div class="nav__menu">
                 <ul class="nav__list" id="nav-list">
                     <!-- Navigation items will be injected by JavaScript -->
@@ -35,7 +37,7 @@
             <!-- Theme change button -->
             <div class="nav__buttons">
                 <i class='bx bxs-moon change-theme' id="theme-button"></i>
-                <i class='bx bx-globe change-theme' id="language-button"></i>
+                <!-- <i class='bx bx-globe change-theme' id="language-button"></i> -->
             </div>
         </nav>
     </header>
@@ -52,7 +54,7 @@
                 <div class="home__data">
                     <span class="home__greeting">Hello, I'm</span>
                     <h1 class="home__name">Amulya Varshney</h1>
-                    <h3 class="home__role">Software Engineer - Carl Zeiss AG, India</h3>
+                    <h3 class="home__role">Software Development Engineer - Razorpay</h3>
                 </div>
             </div>
 
@@ -99,12 +101,20 @@
                     <p class="about__description">
                     </p>
 
-                    <ul class="about__links">
-                        <li><a class="about__items" href="https://www.codechef.com/users/varamu" target="_blank">CC</a></li>
-                        <li><a class="about__items" href="https://codeforces.com/profile/VarAmu" target="_blank">CF</a></li>
-                        <li><a class="about__items" href="https://leetcode.com/VarAmu/" target="_blank">LC</a></li>
-                        <li><a class="about__items" href="https://www.hackerrank.com/elite_player" target="_blank">HR</a></li>
-                    </ul>
+                    <!-- <ul class="about__links">
+                        <li><a class="about__items" href="https://www.codechef.com/users/varamu" target="_blank">
+                            <img width="100" height="12" src="/assets/img/codechef.svg" alt="Codechef">
+                        </a></li>
+                        <li><a class="about__items" href="https://codeforces.com/profile/VarAmu" target="_blank">
+                            <img width="100" height="12" src="/assets/img/codeforces.svg" alt="Codeforces">
+                        </a></li>
+                        <li><a class="about__items" href="https://leetcode.com/VarAmu/" target="_blank">
+                            <img width="20" height="20" src="/assets/img/leetcode.svg" alt="LeetCode">
+                        </a></li>
+                        <li><a class="about__items" href="https://www.hackerrank.com/elite_player" target="_blank">
+                            <img width="100" height="12" src="/assets/img/hackerrank.svg" alt="HackerRank">
+                        </a></li>
+                    </ul> -->
 
                     <a download="" href="./assets/pdf/Amulya_Varshney.pdf" class="button button--ghost">
                         Download CV <i class='bx bxs-download'></i>
@@ -120,183 +130,10 @@
         <section class="skills section" id="skills">
             <h2 class="section__title">Skills</h2>
             <span class="section__subtitle">My Technical level</span>
-
-            <div class="skills-container container grid">
-                <div>
-                    <div class="skills-container-content skills-open">
-
-                        <div class="skills-container-header">
-                            <i class="bx bx-code-alt skills-icon"></i>
-                            <div>
-                                <h1 class="skills-title">Programming Languages</h1>
-                                <span class="skills-subtitle">More than 5 years</span>
-                            </div>
-                            <i class="bx bxs-chevron-down skills-arrow"></i>
-                        </div>
-
-                        <div class="skills-list grid">
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">Python</h3>
-                                    <span class="skills-number">90%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage" style="width: 90%;"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">C#</h3>
-                                    <span class="skills-number">85%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage" style="width: 85%;"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">c/C++</h3>
-                                    <span class="skills-number">75%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage" style="width: 75%;"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">JavaScript/TypeScript</h3>
-                                    <span class="skills-number">80%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage" style="width: 80%;"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">Java</h3>
-                                    <span class="skills-number">70%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage" style="width: 70%;"></span>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="skills-container-content skills-close">
-
-                            <div class="skills-container-header">
-                                <i class="bx bxs-server skills-icon"></i>
-                                <div>
-                                    <h1 class="skills-title">Back-End Developer</h1>
-                                    <span class="skills-subtitle">More than 2 years</span>
-                                </div>
-                                <i class="bx bxs-chevron-down skills-arrow"></i>
-                            </div>
-
-                            <div class="skills-list grid">
-
-                                <div class="skills-data">
-                                    <div class="skills-titles">
-                                        <h3 class="skills-name">PHP</h3>
-                                        <span class="skills-number">80%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-php"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills-data">
-                                    <div class="skills-titles">
-                                        <h3 class="skills-name">Node Js</h3>
-                                        <span class="skills-number">70%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-node"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills-data">
-                                    <div class="skills-titles">
-                                        <h3 class="skills-name">FireBase</h3>
-                                        <span class="skills-number">90%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-firebase"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills-data">
-                                    <div class="skills-titles">
-                                        <h3 class="skills-name">Python</h3>
-                                        <span class="skills-number">55%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-python"></span>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div>
-                        <div class="skills-container-content skills-close">
-
-                            <div class="skills-container-header">
-                                <i class="bx bxs-book-reader skills-icon"></i>
-                                <div>
-                                    <h1 class="skills-title">Frontend Development</h1>
-                                    <span class="skills-subtitle">More than 1 year</span>
-                                </div>
-                                <i class="bx bxs-chevron-down skills-arrow"></i>
-                            </div>
-
-                            <div class="skills-list grid">
-
-                                <div class="skills-data">
-                                    <div class="skills-titles">
-                                        <h3 class="skills-name">Figma</h3>
-                                        <span class="skills-number">90%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-figma"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills-data">
-                                    <div class="skills-titles">
-                                        <h3 class="skills-name">Sketch</h3>
-                                        <span class="skills-number">85%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-sketch"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills-data">
-                                    <div class="skills-titles">
-                                        <h3 class="skills-name">Photoshop</h3>
-                                        <span class="skills-number">85%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percentage skills-ps"></span>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
+        
+            <div class="skills-container container grid" id="skills-container">
+                <!-- Dynamic Content Will Be Injected Here -->
+            </div>
         </section>
         <!--END SUB-SECTION-->
 
@@ -307,18 +144,18 @@
 
             <div class="qualification-container container">
                 <div class="qualification-tabs">
-                    <div class="qualification-tabs-button button-flex qualification-active" data-target="#education">
+                    <div class="qualification-tabs-button button-flex" data-target="#education">
                         <i class="bx bxs-graduation qualification-icon"></i>
                         Education
                     </div>
-                    <div class="qualification-tabs-button button-flex" data-target="#work">
+                    <div class="qualification-tabs-button button-flex qualification-active" data-target="#work">
                         <i class="bx bxs-briefcase qualification-icon"></i>
                         Work
                     </div>
                 </div>
                 <div class="qualification-sections">
-                    <div class="qualification-content qualification-active" data-content id="education"></div>
-                    <div class="qualification-content" data-content id="work"></div>
+                    <div class="qualification-content" data-content id="education"></div>
+                    <div class="qualification-content qualification-active" data-content id="work"></div>
                 </div>
             </div>
         </section>
@@ -336,13 +173,13 @@
         <!--endregion-->
 
         <!-- #region SERVICES -->
-        <section class="services section">
-            <span class="section__subtitle">My Service</span>
-            <h2 class="section__title">What I Offer</h2>
+        <!-- <section class="services section">
+            <h2 class="section__title">My Service</h2>
+            <span class="section__subtitle">What I Offer</span>
             <div class="services__container container grid" id="services-container">
-                <!-- Services items will be injected by JavaScript -->
+                // Services items will be injected by JavaScript 
             </div>
-        </section>
+        </section> -->
         <!--endregion -->
 
         <!--#region WORK -->
@@ -364,13 +201,13 @@
         <!--endregion-->
 
         <!--#region BLOGS -->
-        <section class="blog section" id="blogs">
+        <!-- <section class="blog section" id="blogs">
             <h2 class="section__title">Blogs</h2>
             <span class="section__subtitle">Most Recent Work</span>
 
             <div class="portfolio-container container swiper">
                 <div class="swiper-wrapper" id="blog-container">
-                    <!-- Blog items will be injected by JavaScript -->
+                    // Blog items will be injected by JavaScript
                 </div>
 
                 <div class="swiper-button-next">
@@ -382,21 +219,21 @@
 
                 <div class="swiper-pagination"></div>
             </div>
-        </section>
+        </section> -->
         <!--endregion-->
 
         <!--#region TESTIMONIALS -->
-        <section class="testimonial section">
+        <!-- <section class="testimonial section">
             <h2 class="section__title">Testimonial</h2>
             <span class="section__subtitle">My Client</span>
 
             <div class="testimonial__container container swiper">
                 <div class="swiper-wrapper" id="testimonial-container">
-                    <!-- Testimonial items will be injected by JavaScript -->
+                    // Testimonial items will be injected by JavaScript 
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
-        </section>
+        </section> -->
         <!--endregion-->
 
         <!--#region CONTACT -->
@@ -432,7 +269,7 @@
                             <h3 class="contact__card-title">Twitter</h3>
                             <span class="contact__card-data">https://twitter.com/amulya_varshney</span>
                             <a href="https://twitter.com/amulya_varshney" target="_blank" class="contact__button">
-                                Write <i class="bx bx-right-arrow-alt contact__button-icon"></i>
+                                Write me <i class="bx bx-right-arrow-alt contact__button-icon"></i>
                             </a>
                         </div>
                     </div>

@@ -19,7 +19,7 @@ let width = 0,
 
 function onResize() {
     width = document.body.clientWidth;
-    height = 750;
+    height = 700;
     canvas.width = width;
     canvas.height = height;
 }

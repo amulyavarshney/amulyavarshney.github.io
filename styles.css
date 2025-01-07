@@ -1,0 +1,68 @@
+/* Base styles for the button */
+.btn-connect {
+    position: relative;
+    display: inline-flex;
+    gap: 5px;
+    margin: 2rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+  
+/* Container for the arrow effect */
+.btn-connect::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    transition: width 0.3s ease;
+    z-index: 1;
+}
+  
+/* Button text styles */
+.btn-connect .text {
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+  
+/* Arrow styles */
+.btn-connect .arrow {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    color: white;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 2;
+    padding: 5px; /* Add padding to create the background effect */
+    border-radius: 50%; /* Optional: To make the background round */
+}
+
+/* Hover effect */
+.btn-connect:hover::before {
+    width: 100%;
+}
+  
+.btn-connect:hover .text {
+    transform: translateX(-50px);
+    color: black;
+}
+  
+.btn-connect:hover .arrow {
+    right: 10px;
+    opacity: 1;
+    color: white; /* Change arrow color to white */
+    background-color: black; /* Set background color to black */
+}

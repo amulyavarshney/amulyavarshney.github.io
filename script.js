@@ -1,5 +1,6 @@
 import {
   navItems,
+  skills,
   qualifications,
   experiences,
   services,
@@ -42,50 +43,50 @@ function changeImageSrc(additional) {
   ).src = `./assets/img/work7-${additional}.png`;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const themeButton = document.getElementById('theme-button');
-  const darkThemeClass = 'dark-theme';
-  const lightThemeClass = 'light-theme';
+document.addEventListener("DOMContentLoaded", () => {
+  const themeButton = document.getElementById("theme-button");
+  const darkThemeClass = "dark-theme";
+  const lightThemeClass = "light-theme";
 
-  const moonIconClass = 'bxs-moon';
-  const sunIconClass = 'bxs-sun';
+  const moonIconClass = "bxs-moon";
+  const sunIconClass = "bxs-sun";
 
   // Load saved theme from localStorage
-  const savedTheme = localStorage.getItem('selected-theme');
+  const savedTheme = localStorage.getItem("selected-theme");
   if (savedTheme) {
-      document.body.classList.add(savedTheme);
-      // Set the appropriate icon
-      if (savedTheme === darkThemeClass) {
-          themeButton.classList.remove(moonIconClass);
-          themeButton.classList.add(sunIconClass);
-          // changeImageSrc("d");
-      } else {
-          themeButton.classList.remove(sunIconClass);
-          themeButton.classList.add(moonIconClass);
-          // changeImageSrc("l");
-      }
-  } else {
-      document.body.classList.add(lightThemeClass); // Default to light theme
-      themeButton.classList.add(moonIconClass); // Default to moon icon
+    document.body.classList.add(savedTheme);
+    // Set the appropriate icon
+    if (savedTheme === darkThemeClass) {
+      themeButton.classList.remove(moonIconClass);
+      themeButton.classList.add(sunIconClass);
+      // changeImageSrc("d");
+    } else {
+      themeButton.classList.remove(sunIconClass);
+      themeButton.classList.add(moonIconClass);
       // changeImageSrc("l");
+    }
+  } else {
+    document.body.classList.add(lightThemeClass); // Default to light theme
+    themeButton.classList.add(moonIconClass); // Default to moon icon
+    // changeImageSrc("l");
   }
 
-  themeButton.addEventListener('click', () => {
-      if (document.body.classList.contains(darkThemeClass)) {
-          document.body.classList.remove(darkThemeClass);
-          document.body.classList.add(lightThemeClass);
-          themeButton.classList.remove(sunIconClass);
-          themeButton.classList.add(moonIconClass);
-          // changeImageSrc("l");
-          localStorage.setItem('selected-theme', lightThemeClass);
-      } else {
-          document.body.classList.remove(lightThemeClass);
-          document.body.classList.add(darkThemeClass);
-          themeButton.classList.remove(moonIconClass);
-          themeButton.classList.add(sunIconClass);
-          // changeImageSrc("d");
-          localStorage.setItem('selected-theme', darkThemeClass);
-      }
+  themeButton.addEventListener("click", () => {
+    if (document.body.classList.contains(darkThemeClass)) {
+      document.body.classList.remove(darkThemeClass);
+      document.body.classList.add(lightThemeClass);
+      themeButton.classList.remove(sunIconClass);
+      themeButton.classList.add(moonIconClass);
+      // changeImageSrc("l");
+      localStorage.setItem("selected-theme", lightThemeClass);
+    } else {
+      document.body.classList.remove(lightThemeClass);
+      document.body.classList.add(darkThemeClass);
+      themeButton.classList.remove(moonIconClass);
+      themeButton.classList.add(sunIconClass);
+      // changeImageSrc("d");
+      localStorage.setItem("selected-theme", darkThemeClass);
+    }
   });
 
   if (localStorage.getItem("selected-theme") === lightThemeClass) {
@@ -94,6 +95,63 @@ document.addEventListener('DOMContentLoaded', () => {
     changeImageSrc("d");
   }
 });
+
+// Skills
+
+function renderSkills() {
+  const container = document.getElementById("skills-container");
+
+  skills.forEach((category) => {
+    const categoryDiv = document.createElement("div");
+    categoryDiv.classList.add("skills-container-content", "skills-close");
+
+    const header = document.createElement("div");
+    header.classList.add("skills-container-header");
+    header.innerHTML = `
+          <i class="bx ${category.icon} skills-icon"></i>
+          <div>
+              <h1 class="skills-title">${category.title}</h1>
+              <span class="skills-subtitle">${category.subtitle}</span>
+          </div>
+          <i class="bx bxs-chevron-down skills-arrow"></i>
+      `;
+    header.onclick = () => {
+      categoryDiv.classList.toggle("skills-close");
+      categoryDiv.classList.toggle("skills-open");
+      const list = categoryDiv.querySelector(".skills-list");
+      if (list.style.height) {
+        list.style.height = "";
+      } else {
+        list.style.height = `${list.scrollHeight}px`;
+      }
+    };
+
+    const skillsList = document.createElement("div");
+    skillsList.classList.add("skills-list", "grid");
+
+    category.skills.forEach((skill) => {
+      const skillData = document.createElement("div");
+      skillData.classList.add("skills-data");
+      skillData.innerHTML = `
+              <div class="skills-titles">
+                  <h3 class="skills-name">${skill.name}</h3>
+                  <span class="skills-number">${skill.level}%</span>
+              </div>
+              <div class="skills-bar">
+                  <span class="skills-percentage" style="width: ${skill.level}%;"></span>
+              </div>
+          `;
+      skillsList.appendChild(skillData);
+    });
+
+    categoryDiv.appendChild(header);
+    categoryDiv.appendChild(skillsList);
+    container.appendChild(categoryDiv);
+  });
+}
+
+// Call the function to render skills
+renderSkills();
 
 // Qualifications
 function loadQualifications() {
@@ -197,67 +255,69 @@ experiences.forEach((exp) => {
 });
 
 // Services
-const servicesContainer = document.getElementById("services-container");
+// const servicesContainer = document.getElementById("services-container");
 
-services.forEach((service) => {
-  const serviceCard = document.createElement("div");
-  serviceCard.classList.add("services__card");
-  serviceCard.innerHTML = `
-        <h3 class="services__title">${service.title}</h3>
-        <span class="services__button">
-          See more <i class="bx bx-right-arrow-alt services__icon"></i>
-        </span>
-        <div class="services__modal">
-          <div class="services__modal-content">
-            <i class="bx bx-x services__modal-close"></i>
-            <h3 class="services__modal-title">${service.title}</h3>
-            <p class="services__modal-description">${service.description}</p>
-            <ul class="services__modal-list">
-              ${service.details
-                .map(
-                  (detail) => `
-                <li class="services__modal-item">
-                  <i class="bx bx-check services__modal-icon"></i>
-                  <p class="services__modal-info">${detail}</p>
-                </li>
-              `
-                )
-                .join("")}
-            </ul>
-          </div>
-        </div>
-      `;
-  servicesContainer.appendChild(serviceCard);
-});
+// services.forEach((service) => {
+//   const serviceCard = document.createElement("div");
+//   serviceCard.classList.add("services__card");
+//   serviceCard.innerHTML = `
+//         <h3 class="services__title">${service.title}</h3>
+//         <span class="services__button">
+//           See more <i class="bx bx-right-arrow-alt services__icon"></i>
+//         </span>
+//         <div class="services__modal">
+//           <div class="services__modal-content">
+//             <i class="bx bx-x services__modal-close"></i>
+//             <h3 class="services__modal-title">${service.title}</h3>
+//             <p class="services__modal-description">${service.description}</p>
+//             <ul class="services__modal-list">
+//               ${service.details
+//                 .map(
+//                   (detail) => `
+//                 <li class="services__modal-item">
+//                   <i class="bx bx-check services__modal-icon"></i>
+//                   <p class="services__modal-info">${detail}</p>
+//                 </li>
+//               `
+//                 )
+//                 .join("")}
+//             </ul>
+//           </div>
+//         </div>
+//       `;
+//   servicesContainer.appendChild(serviceCard);
+// });
 
-const modalViews = document.querySelectorAll(".services__modal"),
-  modalButtons = document.querySelectorAll(".services__button"),
-  modalClose = document.querySelectorAll(".services__modal-close");
+// const modalViews = document.querySelectorAll(".services__modal"),
+//   modalButtons = document.querySelectorAll(".services__button"),
+//   modalClose = document.querySelectorAll(".services__modal-close");
 
-let modal = function (modalClick) {
-  modalViews[modalClick].classList.add("active-modal");
-};
+// let modal = function (modalClick) {
+//   modalViews[modalClick].classList.add("active-modal");
+// };
 
-modalButtons.forEach((mb, i) => {
-  mb.addEventListener("click", () => {
-    modal(i);
-  });
-});
+// modalButtons.forEach((mb, i) => {
+//   mb.addEventListener("click", () => {
+//     modal(i);
+//   });
+// });
 
-modalClose.forEach((mc) => {
-  mc.addEventListener("click", () => {
-    modalViews.forEach((mv) => {
-      mv.classList.remove("active-modal");
-    });
-  });
-});
+// modalClose.forEach((mc) => {
+//   mc.addEventListener("click", () => {
+//     modalViews.forEach((mv) => {
+//       mv.classList.remove("active-modal");
+//     });
+//   });
+// });
 
 // Works
 function filterWorks(filter) {
   const workContainer = document.getElementById("work-container");
-  workContainer.innerHTML = '';
+  workContainer.innerHTML = "";
 
-  const filteredWorks = works.filter(work => filter === 'all' || work.category === filter.substring(1));
+  const filteredWorks = works.filter(
+    (work) => filter === "all" || work.category === filter.substring(1)
+  );
   filteredWorks.forEach((work) => {
     const workCard = document.createElement("div");
     workCard.classList.add("work__card", "mix", work.category);
@@ -273,14 +333,14 @@ function filterWorks(filter) {
 }
 
 // Initial filter on page load
-document.addEventListener('DOMContentLoaded', () => {
-  filterWorks('all');
+document.addEventListener("DOMContentLoaded", () => {
+  filterWorks("all");
 });
 
 // Filter works when filter attribute changes
-document.querySelectorAll('.work__item').forEach(item => {
-  item.addEventListener('click', function() {
-    const filter = this.getAttribute('data-filter');
+document.querySelectorAll(".work__item").forEach((item) => {
+  item.addEventListener("click", function () {
+    const filter = this.getAttribute("data-filter");
     filterWorks(filter);
   });
 });
