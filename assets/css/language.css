@@ -1,0 +1,73 @@
+/* Language Switcher Styles */
+.language-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--title-color);
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 50%;
+  border: 1.5px solid var(--text-color-light);
+  margin-left: 1rem;
+}
+
+.language-toggle:hover {
+  color: var(--first-color);
+  border-color: var(--first-color);
+  transform: scale(1.05);
+}
+
+.dark-theme .language-toggle {
+  border-color: var(--text-color-light);
+  color: var(--title-color);
+}
+
+.dark-theme .language-toggle:hover {
+  color: var(--first-color);
+  border-color: var(--first-color);
+}
+
+/* Internationalization Styles */
+[data-i18n] {
+  transition: opacity 0.3s ease;
+}
+
+html[lang="hi"] .home__name,
+html[lang="hi"] .footer__title {
+  font-family: 'Hind', 'Poppins', sans-serif;
+}
+
+/* Add language-specific typography adjustments */
+html[lang="hi"] .qualification-title,
+html[lang="hi"] .experiences__title,
+html[lang="hi"] .work__title {
+  font-size: 0.9em; /* Slightly reduce font size for Hindi which may be longer */
+}
+
+/* Loading state for i18n elements during language change */
+.i18n-loading [data-i18n] {
+  opacity: 0.5;
+}
+
+/* Styles for RTL languages if needed in the future */
+html[dir="rtl"] {
+  text-align: right;
+}
+
+html[dir="rtl"] .nav__list {
+  padding-right: 0;
+}
+
+html[dir="rtl"] .qualification-rounder {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
+html[dir="rtl"] .footer__social-link {
+  margin-right: 0;
+  margin-left: 1.5rem;
+} 

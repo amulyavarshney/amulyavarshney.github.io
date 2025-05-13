@@ -1,62 +1,323 @@
 {
+    "home": "होम",
+    "skills": "कौशल",
+    "qualification": "योग्यता",
+    "education": "शिक्षा",
+    "work": "कार्य",
+    "experience": "अनुभव",
+    "projects": "प्रोजेक्ट",
+    "contact": "संपर्क",
+    
     "greeting_msg": "नमस्ते, मैं हूँ",
     "name": "अमूल्य वार्ष्णेय",
-    "role": "सॉफ़्टवेयर इंजीनियर, कार्ल ज़ीस - भारत",
+    "role": "सॉफ़्टवेयर डेवलपमेंट इंजीनियर - रेज़रपे",
     
-    "about_me": "मेरे बारे में",
-    "scroll_down": "नीचे स्क्रॉल करें",
-    "my_intro": "मेरा परिचय",
-
-    "experience": "अनुभव",
-    "experience_value": "1+ वर्ष",
+    "experience_value": "1.5+ वर्ष",
     "completed": "पूर्ण",
     "completed_value": "10+ प्रोजेक्ट",
     "worked": "कार्यरत",
     "worked_value": "3+ कंपनियाँ",
-    "about_description": "उत्साहजनक एंड्रॉइड डेवलपर, मुख्य रूप से कोटलिन के साथ काम करता है। अधिकतम लाभ उठाने के लिए जटिल एंड्रॉइड व्यूज और कॉम्पोजेबल्स बनाना पसंद करता है और उन्हें पूरी तरह से कार्यकारी ऐप्स में जोड़ना।",
+    
+    "about_description": "उत्साहजनक सॉफ्टवेयर इंजीनियर, फुल स्टैक डेवलपमेंट पर काम करता है। जटिल वेब एप्लिकेशन बनाना और उन्हें पूरी तरह से कार्यकारी ऐप्स में जोड़ना पसंद करता हूँ। क्लाउड और डिस्ट्रीब्यूटेड सिस्टम से परिचित हूँ।",
     "download_cv": "सीवी डाउनलोड करें",
     "contact_me": "मुझसे संपर्क करें",
     
-    "my_abilities": "मेरी क्षमताएं",
-    "my_experience": "मेरा अनुभव",
-    "android_development": "एंड्रॉइड डेवलपमेंट",
-    "languages": "भाषाएं",
-    "design_patterns": "डिजाइन पैटर्न",
-    "design_patterns_more": "(MVI/MVP/MVC/MVVM)",
-    "database": "डेटाबेस",
-    "database_more": "(Room, Firebase)",
-    "version_control": "वर्जन कंट्रोल",
-    "version_control_more": "(गिट, गिटहब और गिटलैब)",
-    "open_gl": "ओपेनजीएल",
-    "advanced": "उन्नत",
-    "api": "एपीआई",
-    "api_more": "(रेट्रोफिट2, वॉली, मोशी, जीसॉन)",
-    "unit_tests": "यूनिट टेस्ट",
-    "unit_tests_more": "(यूनिट, यूआई, एंड-टू-एंड)",
-    "dependency_injection": "डिपेंडेंसी इंजेक्शन",
-    "dependency_injection_more": "डैगर2, हिल्ट",
-    "my_portfolio": "मेरा पोर्टफोलियो",
-    "recent_projects": "हाल के प्रोजेक्ट",
+    "skills_title": "कौशल",
+    "skills_subtitle": "मेरा तकनीकी स्तर",
+    "skills_content": [
+      {
+        "title": "प्रोग्रामिंग भाषाएँ",
+        "subtitle": "5 साल से अधिक",
+        "logo": "bx bx-code-alt",
+        "data": [
+          {
+            "name": "पायथन",
+            "number": "90%"
+          },
+          {
+            "name": "सी#",
+            "number": "85%"
+          },
+          {
+            "name": "सी/सी++",
+            "number": "75%"
+          },
+          {
+            "name": "जावास्क्रिप्ट/टाइपस्क्रिप्ट",
+            "number": "80%"
+          },
+          {
+            "name": "जावा",
+            "number": "70%"
+          }
+        ]
+      },
+      {
+        "title": "फ्रंटएंड",
+        "subtitle": "2 साल से अधिक",
+        "logo": "bx bx-code-alt",
+        "data": [
+          {
+            "name": "एचटीएमएल/सीएसएस",
+            "number": "90%"
+          },
+          {
+            "name": "जावास्क्रिप्ट/टाइपस्क्रिप्ट",
+            "number": "90%"
+          },
+          {
+            "name": "रिएक्ट.जेएस",
+            "number": "80%"
+          },
+          {
+            "name": "नेक्स्ट.जेएस",
+            "number": "90%"
+          }
+        ]
+      },
+      {
+        "title": "बैकएंड",
+        "subtitle": "2 साल से अधिक",
+        "logo": "bx bxs-server",
+        "data": [
+          {
+            "name": "नोड.जेएस",
+            "number": "80%"
+          },
+          {
+            "name": "जांगो",
+            "number": "75%"
+          },
+          {
+            "name": "फास्टएपीआई",
+            "number": "90%"
+          }
+        ]
+      }
+    ],
+  
+    "qualification_title": "योग्यता",
+    "qualification_subtitle": "मेरी व्यक्तिगत यात्रा",
+    "qualification_tabs": [
+      {
+        "name": "शिक्षा",
+        "logo": "bx bxs-graduation",
+        "data": [
+          {
+            "title": "बी.टेक इन सीएसई",
+            "subtitle": "आईआईआईटी - नया रायपुर",
+            "calender": "2019-2023"
+          },
+          {
+            "title": "प्रोफेशनल डिप्लोमा",
+            "subtitle": "एचबीटीयू कानपुर",
+            "calender": "2018-2019"
+          },
+          {
+            "title": "इंटरमीडिएट स्कूल",
+            "subtitle": "के. एच. एम. सी. बहजोई",
+            "calender": "2015-2017"
+          },
+          {
+            "title": "हाई स्कूल",
+            "subtitle": "एस. एच. सी. एस. चंदौसी",
+            "calender": "2013-2015"
+          }
+        ]
+      },
+      {
+        "name": "कार्य",
+        "logo": "bx bxs-briefcase",
+        "data": [
+          {
+            "title": "सॉफ़्टवेयर डेवलपमेंट इंजीनियर",
+            "subtitle": "रेज़रपे - इंडिया",
+            "calender": "अगस्त 2024 - वर्तमान"
+          },
+          {
+            "title": "सॉफ़्टवेयर इंजीनियर",
+            "subtitle": "ज़ेईस - इंडिया",
+            "calender": "जुलाई 2023 - अगस्त 2024"
+          },
+          {
+            "title": "सॉफ़्टवेयर इंजीनियर इंटर्न",
+            "subtitle": "ज़ेईस - इंडिया",
+            "calender": "जनवरी 2023 - जून 2023"
+          },
+          {
+            "title": "फुल स्टैक डेवलपर इंटर्न",
+            "subtitle": "हैकरअर्थ - इंडिया",
+            "calender": "मार्च 2022 - दिसंबर 2022"
+          },
+          {
+            "title": "आर एंड डी इंटर्न",
+            "subtitle": "सैमसंग आर एंड डी इंस्टिट्यूट (एसआरआई-बी)",
+            "calender": "अगस्त 2021 - फरवरी 2022"
+          },
+          {
+            "title": "एसडीई इंटर्न",
+            "subtitle": "डाटाचैनल - इंडिया",
+            "calender": "मार्च 2021 - जून 2021"
+          }
+        ]
+      }
+    ],
+  
+    "experience_title": "अनुभव",
+    "experience_subtitle": "मेरी क्षमताएं",
+    "experience_content": [
+      {
+        "title": "सॉफ़्टवेयर डेवलपमेंट इंजीनियर",
+        "subtitle": "रेज़रपे",
+        "data": [
+          {
+            "name": "भाषाएँ",
+            "level": "पायथन, गो, पीएचपी"
+          },
+          {
+            "name": "बैकएंड डेवलपमेंट",
+            "level": "फास्टएपीआई"
+          },
+          {
+            "name": "माइक्रोसर्विस कम्युनिकेशन",
+            "level": "रेस्ट एपीआई, काफ्का, रैबिटएमक्यू"
+          },
+          {
+            "name": "डेटाबेस",
+            "level": "पोस्टग्रेएसक्यूएल, रेडिस"
+          },
+          {
+            "name": "क्लाउड इंफ्रास्ट्रक्चर",
+            "level": "एडब्ल्यूएस"
+          },
+          {
+            "name": "एलएलएम मॉडल",
+            "level": "ओपन एआई, क्लॉड"
+          },
+          {
+            "name": "इंटरनल टूल्स",
+            "level": "जीरा, स्लैक"
+          },
+          {
+            "name": "वर्जन कंट्रोल",
+            "level": "गिट, गिटहब"
+          }
+        ]
+      },
+      {
+        "title": "सॉफ़्टवेयर इंजीनियर",
+        "subtitle": "ज़ेईस",
+        "data": [
+          {
+            "name": "भाषाएँ",
+            "level": "सी#, जावास्क्रिप्ट, टाइपस्क्रिप्ट"
+          },
+          {
+            "name": "वेब डेवलपमेंट",
+            "level": "रिएक्ट, नेक्स्ट.जेएस, नोड.जेएस, टेलविंड सीएसएस"
+          },
+          {
+            "name": "बैकएंड डेवलपमेंट",
+            "level": "एएसपी.नेट, .नेट कोर, एंटिटी फ्रेमवर्क"
+          },
+          {
+            "name": "माइक्रोसर्विस कम्युनिकेशन",
+            "level": "रेस्ट एपीआई, रैबिटएमक्यू, जीआरपीसी"
+          },
+          {
+            "name": "डेटाबेस",
+            "level": "एमएस एसक्यूएल, एसएसएमएस, मोंगोडीबी"
+          },
+          {
+            "name": "क्लाउड इंफ्रास्ट्रक्चर",
+            "level": "माइक्रोसॉफ्ट अज़्योर"
+          },
+          {
+            "name": "इंटरनल टूल्स",
+            "level": "ज़ेईस आईडी, ग्लोबल मेल एपीआई"
+          },
+          {
+            "name": "वर्जन कंट्रोल",
+            "level": "गिट, अज़्योर देवॉप्स"
+          },
+          {
+            "name": "एपीआई डॉक्युमेंटेशन",
+            "level": "पोस्टमैन, स्वैगर"
+          }
+        ]
+      }
+    ],
+  
+    "my_portfolio": "हाल के कार्य",
+    "recent_projects": "मेरा पोर्टफोलियो",
     "all": "सभी",
-    "android": "एंड्रॉइड",
     "web": "वेब",
-    "design": "डिज़ाइन",
+    "backend": "बैकएंड",
+    "blockchain": "ब्लॉकचेन",
+    "visit": "विज़िट",
+    
+    "works": [
+      {
+        "category": "web",
+        "imgSrc": "./assets/img/work1-d.png",
+        "title": "रिसोर्स मैनेजमेंट सिस्टम",
+        "link": "https://rms-portal.azurewebsites.net"
+      },
+      {
+        "category": "web",
+        "imgSrc": "./assets/img/work5-d.png",
+        "title": "ओएस अल्गोरिदम विज़ुअलाइज़र",
+        "link": "https://github.com/amulyavarshney/OS-Algorithm-Visualizer"
+      },
+      {
+        "category": "backend",
+        "imgSrc": "./assets/img/work2-d.png",
+        "title": "बुक कैटलॉग माइक्रोसर्विस",
+        "link": "https://github.com/amulyavarshney/AspNetCore6.Microservices.BookCatalog"
+      },
+      {
+        "category": "web",
+        "imgSrc": "./assets/img/work3-d.png",
+        "title": "सी शेयर",
+        "link": "https://github.com/amulyavarshney/C-Share"
+      },
+      {
+        "category": "blockchain",
+        "imgSrc": "./assets/img/work7-d.png",
+        "title": "ऑनचेन डॉक एडिटर",
+        "link": "https://github.com/amulyavarshney/Dynamic-Storage-Auditing-In-Blockchain"
+      },
+      {
+        "category": "web",
+        "imgSrc": "./assets/img/work4-d.png",
+        "title": "लॉगिन एंड ऑथेंटिकेशन ऐप",
+        "link": "https://github.com/amulyavarshney/Authentication-Page"
+      }
+    ],
+  
     "get_in_touch": "संपर्क में रहें",
-    "send_direct_message": "सीधा संदेश भेजें",
     "popular_links": "लोकप्रिय लिंक",
-    "form_name": "नाम",
-    "form_email": "ईमेल",
     "write_me": "मुझे लिखें",
+    "email": "ईमेल",
     "linked_in": "लिंक्डइन",
-    "messanger": "मैसेंजर",
+    "messanger": "एक्स (ट्विटर)",
+    "send_direct_message": "सीधा संदेश भेजें",
+    "form_name": "नाम",
+    "form_name_placeholder": "अपना नाम दर्ज करें",
+    "name_required": "नाम आवश्यक है",
+    "form_email": "ईमेल पता",
+    "email_hint": "अपना ईमेल पता दर्ज करें",
+    "email_required": "ईमेल आवश्यक है",
+    "email_invalid": "कृपया एक वैध ईमेल दर्ज करें",
     "form_subject": "विषय",
-    "form_message": "संदेश",
-    "send_message": "संदेश भेजें",
-    "email_hint": "अपना ईमेल दर्ज करें",
     "subject_hint": "विषय दर्ज करें",
+    "subject_required": "विषय आवश्यक है",
+    "form_message": "संदेश",
     "message_hint": "अपना संदेश यहाँ लिखें",
-    "about": "के बारे में",
-    "projects": "प्रोजेक्ट",
-    "copyright": "© अमूल्य वार्ष्णेय। सर्वाधिकार सुरक्षित",
-    "about_summary": "मैं एक उत्साहित एंड्रॉइड डेवलपर हूँ, मुझे जटिल एंड्रॉइड व्यूज और कॉम्पोजेबल्स बनाना पसंद है। मैं अपने दस्तावेज़ों और कोड में ध्यान केंद्रित करता हूँ, और उन्हें संरचित तरीके से रखता हूँ जो अधिकतम संभवता और उन्नति प्रदान करता है। मैं टीम वर्क में बेहतर होने की कोशिश करता हूँ और एक समस्या को हल करने के लिए नए तरीके ढूंढना मेरा शौक है।"
+    "message_required": "संदेश आवश्यक है",
+    "send_message": "संदेश भेजें",
+    "message_sent": "संदेश सफलतापूर्वक भेजा गया!",
+    
+    "about": "मेरे बारे में",
+    "copyright": "© अमूल्य वार्ष्णेय। सर्वाधिकार सुरक्षित"
 }

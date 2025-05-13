@@ -1,19 +1,29 @@
 {
+  "home": "Home",
+  "skills": "Skills",
+  "qualification": "Qualification",
+  "education": "Education",
+  "work": "Work",
+  "experience": "Experience",
+  "projects": "Projects",
+  "contact": "Contact",
+  
   "greeting_msg": "Hello, I'm",
   "name": "Amulya Varshney",
   "role": "Software Development Engineer - Razorpay",
-  "experience": "Experience",
-  "experience_value": "1.5+ Year",
+  
+  "experience_value": "1.5+ Years",
   "completed": "Completed",
   "completed_value": "10+ Projects",
   "worked": "Worked",
   "worked_value": "3+ Companies",
+  
   "about_description": "Highly motivated Software Engineer, working on full stack development. Loves creating complex Web Applications and combining them into fully functional apps. Familiar with Cloud and Distributed Systems",
   "download_cv": "Download CV",
   "contact_me": "Contact Me",
 
   "skills_title": "Skills",
-  "skills_subtitle": "My Technical Level",
+  "skills_subtitle": "My Technical level",
   "skills_content": [
     {
       "title": "Programming Languages",
@@ -52,7 +62,7 @@
           "number": "90%"
         },
         {
-          "name": "JavaScript/TYpeScript",
+          "name": "JavaScript/TypeScript",
           "number": "90%"
         },
         {
@@ -120,9 +130,14 @@
       "logo": "bx bxs-briefcase",
       "data": [
         {
+          "title": "Software Development Engineer",
+          "subtitle": "Razorpay - India",
+          "calender": "Aug 2024 - Present"
+        },
+        {
           "title": "Software Engineer",
           "subtitle": "Zeiss - India",
-          "calender": "Jul 2023 - Present"
+          "calender": "Jul 2023 - Aug 2024"
         },
         {
           "title": "Software Engineer Intern",
@@ -151,6 +166,44 @@
   "experience_title": "Experience",
   "experience_subtitle": "My Abilities",
   "experience_content": [
+    {
+      "title": "Software Development Engineer",
+      "subtitle": "Razorpay",
+      "data": [
+        {
+          "name": "Languages",
+          "level": "Python, Go, Php"
+        },
+        {
+          "name": "Backend Development",
+          "level": "FastAPI"
+        },
+        {
+          "name": "Microservice Communication",
+          "level": "REST API, Kafka, RabbitMQ"
+        },
+        {
+          "name": "Database",
+          "level": "PostgreSQL, Redis"
+        },
+        {
+          "name": "Cloud Infrastructure",
+          "level": "AWS"
+        },
+        {
+          "name": "LLM Model",
+          "level": "Open AI, Claude"
+        },
+        {
+          "name": "Internal Tools",
+          "level": "Jira, Slack"
+        },
+        {
+          "name": "Version Control",
+          "level": "Git, Github"
+        }
+      ]
+    },
     {
       "title": "Software Engineer",
       "subtitle": "Zeiss",
@@ -192,62 +245,55 @@
           "level": "Postman, Swagger"
         }
       ]
-    },
-    {
-      "title": "Full Stack Developer",
-      "subtitle": "Hackerearth",
-      "data": [
-        {
-          "name": "Languages",
-          "level": "Python, JavaScript"
-        },
-        {
-          "name": "Frameworks",
-          "level": "jQuery, Django, FastAPI"
-        },
-        {
-          "name": "Database",
-          "level": "SQL, MongoDB"
-        },
-        {
-          "name": "Internal Tools",
-          "level": "Code Checker, Code Factory Server"
-        },
-        {
-          "name": "Cloud Infrastructure",
-          "level": "AWS"
-        },
-        {
-          "name": "Tools and Platform",
-          "level": "Linux, Docker, Bash Script"
-        }
-      ]
     }
   ],
 
-  "android_development": "Android Development",
-  "languages": "Languages",
-  "design_patterns": "Design Patterns",
-  "design_patterns_more": "(MVI/MVP/MVC/MVVM)",
-  "database": "Database",
-  "database_more": "(Room, Firebase)",
-  "version_control": "Version Control",
-  "version_control_more": "(Git, GitHub & GitLab)",
-  "open_gl": "OpenGL",
-  "advanced": "Advanced",
-  "api": "API",
-  "api_more": "(Retrofit2, Volley, Moshi, GSON)",
-  "unit_tests": "Unit Tests",
-  "unit_tests_more": "(Unit, UI, End-to-End)",
-  "dependency_injection": "Dependency Injection",
-  "dependency_injection_more": "Dagger2, Hilt",
-  
-  "my_portfolio": "My Portfolio",
-  "recent_projects": "Recent Projects",
+  "my_portfolio": "Recent Works",
+  "recent_projects": "My Portfolio",
   "all": "All",
   "web": "Web",
   "backend": "Backend",
-  "design": "Design",
+  "blockchain": "Blockchain",
+  "visit": "Visit",
+  
+  "works": [
+    {
+      "category": "web",
+      "imgSrc": "./assets/img/work1-d.png",
+      "title": "Resource Management System",
+      "link": "https://rms-portal.azurewebsites.net"
+    },
+    {
+      "category": "web",
+      "imgSrc": "./assets/img/work5-d.png",
+      "title": "OS Algorithms Visualizer",
+      "link": "https://github.com/amulyavarshney/OS-Algorithm-Visualizer"
+    },
+    {
+      "category": "backend",
+      "imgSrc": "./assets/img/work2-d.png",
+      "title": "Book Catalog Microservice",
+      "link": "https://github.com/amulyavarshney/AspNetCore6.Microservices.BookCatalog"
+    },
+    {
+      "category": "web",
+      "imgSrc": "./assets/img/work3-d.png",
+      "title": "C Share",
+      "link": "https://github.com/amulyavarshney/C-Share"
+    },
+    {
+      "category": "blockchain",
+      "imgSrc": "./assets/img/work7-d.png",
+      "title": "Onchain Doc Editor",
+      "link": "https://github.com/amulyavarshney/Dynamic-Storage-Auditing-In-Blockchain"
+    },
+    {
+      "category": "web",
+      "imgSrc": "./assets/img/work4-d.png",
+      "title": "Login and Authentication App",
+      "link": "https://github.com/amulyavarshney/Authentication-Page"
+    }
+  ],
 
   "get_in_touch": "Get In Touch",
   "popular_links": "Popular Links",
@@ -257,15 +303,21 @@
   "messanger": "X (Twitter)",
   "send_direct_message": "Send Direct Message",
   "form_name": "Name",
-  "form_email": "Email",
-  "form_subject": "Subject",
-  "form_message": "Message",
-  "send_message": "Send Message",
+  "form_name_placeholder": "Enter your Name",
+  "name_required": "Name is required",
+  "form_email": "Email Address",
   "email_hint": "Enter your Email Address",
+  "email_required": "Email is required",
+  "email_invalid": "Please enter a valid email",
+  "form_subject": "Subject",
   "subject_hint": "Enter the Subject",
+  "subject_required": "Subject is required",
+  "form_message": "Message",
   "message_hint": "Write your message here",
+  "message_required": "Message is required",
+  "send_message": "Send Message",
+  "message_sent": "Message sent successfully!",
+  
   "about": "About",
-  "projects": "Projects",
-  "experiences": "Experiences",
-  "copyright": "&#169; Amulya Varshney. All right reserved"
+  "copyright": "© Amulya Varshney. All right reserved"
 }

@@ -16,6 +16,7 @@
 
     <!--------------------- CSS --------------------->
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/language.css">
 
     <title>Amulya Varshney</title>
 </head>
@@ -34,10 +35,10 @@
                 </ul>
             </div>
 
-            <!-- Theme change button -->
+            <!-- Theme and language change buttons -->
             <div class="nav__buttons">
                 <i class='bx bxs-moon change-theme' id="theme-button"></i>
-                <!-- <i class='bx bx-globe change-theme' id="language-button"></i> -->
+                <span class="language-toggle" id="language-button">EN</span>
             </div>
         </nav>
     </header>
@@ -52,9 +53,9 @@
             <canvas id="canvas"></canvas>
             <div class="home__container container grid">
                 <div class="home__data">
-                    <span class="home__greeting">Hello, I'm</span>
-                    <h1 class="home__name">Amulya Varshney</h1>
-                    <h3 class="home__role">Software Development Engineer - Razorpay</h3>
+                    <span class="home__greeting" data-i18n="greeting_msg">Hello, I'm</span>
+                    <h1 class="home__name" data-i18n="name">Amulya Varshney</h1>
+                    <h3 class="home__role" data-i18n="role">Software Development Engineer - Razorpay</h3>
                 </div>
             </div>
 
@@ -83,22 +84,22 @@
                     <div class="about__info">
                         <div class="about__box">
                             <i class='bx bx-award about__icon'></i>
-                            <h3 class="about__title">Experience</h3>
-                            <span class="about__subtitle">1+ Years</span>
+                            <h3 class="about__title" data-i18n="experience">Experience</h3>
+                            <span class="about__subtitle" data-i18n="experience_value">1+ Years</span>
                         </div>
                         <div class="about__box">
                             <i class='bx bx-briefcase-alt about__icon'></i>
-                            <h3 class="about__title">Completed</h3>
-                            <span class="about__subtitle">10+ Projects</span>
+                            <h3 class="about__title" data-i18n="completed">Completed</h3>
+                            <span class="about__subtitle" data-i18n="completed_value">10+ Projects</span>
                         </div>
                         <div class="about__box">
                             <i class='bx bxs-buildings about__icon'></i>
-                            <h3 class="about__title">Worked</h3>
-                            <span class="about__subtitle">3+ Companies</span>
+                            <h3 class="about__title" data-i18n="worked">Worked</h3>
+                            <span class="about__subtitle" data-i18n="worked_value">3+ Companies</span>
                         </div>
                     </div>
 
-                    <p class="about__description">
+                    <p class="about__description" data-i18n="about_description">
                     </p>
 
                     <!-- <ul class="about__links">
@@ -117,10 +118,12 @@
                     </ul> -->
 
                     <a download="" href="./assets/pdf/Amulya_Varshney.pdf" class="button button--ghost">
-                        Download CV <i class='bx bxs-download'></i>
+                        <span data-i18n="download_cv">Download CV</span> <i class='bx bxs-download'></i>
                     </a>
 
-                    <a href="#contact" class="button">Contact Me</a>
+                    <a href="#contact" class="button">
+                        <span data-i18n="contact_me">Contact Me</span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -128,8 +131,8 @@
 
         <!-- SKILLS -->
         <section class="skills section" id="skills">
-            <h2 class="section__title">Skills</h2>
-            <span class="section__subtitle">My Technical level</span>
+            <h2 class="section__title" data-i18n="skills_title">Skills</h2>
+            <span class="section__subtitle" data-i18n="skills_subtitle">My Technical level</span>
         
             <div class="skills-container container grid" id="skills-container">
                 <!-- Dynamic Content Will Be Injected Here -->
@@ -139,18 +142,18 @@
 
         <!-- QUALIFICATION -->
         <section class="qualification section" id="qualifications">
-            <h2 class="section__title">Qualification</h2>
-            <span class="section__subtitle">My Personal Journey</span>
+            <h2 class="section__title" data-i18n="qualification_title">Qualification</h2>
+            <span class="section__subtitle" data-i18n="qualification_subtitle">My Personal Journey</span>
 
             <div class="qualification-container container">
                 <div class="qualification-tabs">
                     <div class="qualification-tabs-button button-flex" data-target="#education">
                         <i class="bx bxs-graduation qualification-icon"></i>
-                        Education
+                        <span data-i18n="education">Education</span>
                     </div>
                     <div class="qualification-tabs-button button-flex qualification-active" data-target="#work">
                         <i class="bx bxs-briefcase qualification-icon"></i>
-                        Work
+                        <span data-i18n="work">Work</span>
                     </div>
                 </div>
                 <div class="qualification-sections">
@@ -163,8 +166,8 @@
 
         <!--#region EXPERIENCES-->
         <section class="experiences section" id="experiences">
-            <h2 class="section__title">Experience</h2>
-            <span class="section__subtitle">My abilities</span>
+            <h2 class="section__title" data-i18n="experience_title">Experience</h2>
+            <span class="section__subtitle" data-i18n="experience_subtitle">My abilities</span>
 
             <div class="experiences__container container grid" id="experiences-container">
             <!-- Experience items will be injected by JavaScript -->
@@ -184,14 +187,14 @@
 
         <!--#region WORK -->
         <section class="work section" id="works">
-            <h2 class="section__title">Recent Works</h2>
-            <span class="section__subtitle">My Portfolio</span>
+            <h2 class="section__title" data-i18n="my_portfolio">Recent Works</h2>
+            <span class="section__subtitle" data-i18n="recent_projects">My Portfolio</span>
 
             <div class="work__filters">
-                <span class="work__item active-work" data-filter='all'>All</span>
-                <span class="work__item" data-filter='.web'>Web</span>
-                <span class="work__item" data-filter='.backend'>Backend</span>
-                <span class="work__item" data-filter='.blockchain'>Blockchain</span>
+                <span class="work__item active-work" data-filter='all' data-i18n="all">All</span>
+                <span class="work__item" data-filter='.web' data-i18n="web">Web</span>
+                <span class="work__item" data-filter='.backend' data-i18n="backend">Backend</span>
+                <span class="work__item" data-filter='.blockchain' data-i18n="blockchain">Blockchain</span>
             </div>
 
             <div class="work__container container grid" id="work-container">
@@ -238,65 +241,67 @@
 
         <!--#region CONTACT -->
         <section class="contact section" id="contact">
-            <h2 class="section__title">Contact Me</h2>
-            <span class="section__subtitle">Get in touch</span>
+            <h2 class="section__title" data-i18n="contact_me">Contact Me</h2>
+            <span class="section__subtitle" data-i18n="get_in_touch">Get in touch</span>
 
             <div class="contact__container container grid">
                 <div class="contact__content">
-                    <h3 class="contact__title">Popular Links</h3>
+                    <h3 class="contact__title" data-i18n="popular_links">Popular Links</h3>
 
                     <div class="contact__info">
                         <div class="contact__card">
                             <i class="bx bxl-gmail contact__card-icon"></i>
-                            <h3 class="contact__card-title">Email</h3>
+                            <h3 class="contact__card-title" data-i18n="email">Email</h3>
                             <span class="contact__card-data">amulyavarshney7@gmail.com</span>
                             <a href="mailto:amulyavarshney7@gmail.com" target="_blank" class="contact__button">
-                                Write me <i class="bx bx-right-arrow-alt contact__button-icon"></i>
+                                <span data-i18n="write_me">Write me</span> <i class="bx bx-right-arrow-alt contact__button-icon"></i>
                             </a>
                         </div>
 
                         <div class="contact__card">
                             <i class='bx bxl-linkedin-square contact__card-icon'></i>
-                            <h3 class="contact__card-title">LinkedIn</h3>
+                            <h3 class="contact__card-title" data-i18n="linked_in">LinkedIn</h3>
                             <span class="contact__card-data">https://www.linkedin.com/in/varamu/</span>
                             <a href="https://www.linkedin.com/in/varamu/" target="_blank" class="contact__button">
-                                Write me <i class="bx bx-right-arrow-alt contact__button-icon"></i>
+                                <span data-i18n="write_me">Write me</span> <i class="bx bx-right-arrow-alt contact__button-icon"></i>
                             </a>
                         </div>
 
                         <div class="contact__card">
                             <i class="bx bxl-twitter contact__card-icon"></i>
-                            <h3 class="contact__card-title">Twitter</h3>
+                            <h3 class="contact__card-title" data-i18n="messanger">Twitter</h3>
                             <span class="contact__card-data">https://twitter.com/amulya_varshney</span>
                             <a href="https://twitter.com/amulya_varshney" target="_blank" class="contact__button">
-                                Write me <i class="bx bx-right-arrow-alt contact__button-icon"></i>
+                                <span data-i18n="write_me">Write me</span> <i class="bx bx-right-arrow-alt contact__button-icon"></i>
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="contact__content">
-                    <h3 class="contact__title">Send Direct Message</h3>
+                    <h3 class="contact__title" data-i18n="send_direct_message">Send Direct Message</h3>
 
                     <form class="contact__form">
                         <div class="contact__form-div">
-                            <label for="client_name" class="contact__form-tag">Name</label>
+                            <label for="client_name" class="contact__form-tag" data-i18n="form_name">Name</label>
                             <input id="client_name" type="text" placeholder="Enter your Name" class="contact__form-input">
                         </div>
                         <div class="contact__form-div">
-                            <label for="client_email" class="contact__form-tag">Email Address</label>
+                            <label for="client_email" class="contact__form-tag" data-i18n="form_email">Email Address</label>
                             <input id="client_email" type="email" placeholder="Enter your Email Address" class="contact__form-input">
                         </div>
                         <div class="contact__form-div">
-                            <label for="client_subject" class="contact__form-tag">Subject</label>
+                            <label for="client_subject" class="contact__form-tag" data-i18n="form_subject">Subject</label>
                             <input id="client_subject" type="text" placeholder="Enter the Subject" class="contact__form-input">
                         </div>
                         <div class="contact__form-div contact__form-area">
-                            <label for="client_message" class="contact__form-tag">Message</label>
+                            <label for="client_message" class="contact__form-tag" data-i18n="form_message">Message</label>
                             <textarea id="client_message" cols="30" rows="10" placeholder="Write your Message here" class="contact__form-input"></textarea>
                         </div>
 
-                        <button type="submit" id="send_email" class="button">Send Message <i class='bx bxl-send'></i></button>
+                        <button type="submit" id="send_email" class="button">
+                            <span data-i18n="send_message">Send Message</span> <i class='bx bxl-send'></i>
+                        </button>
                     </form>
                 </div>
             </div>
@@ -308,17 +313,17 @@
     <!--#region FOOTER -->
     <footer class="footer">
         <div class="footer__container container">
-            <h1 class="footer__title">Amulya Varshney</h1>
+            <h1 class="footer__title" data-i18n="name">Amulya Varshney</h1>
 
             <ul class="footer__list">
                 <li>
-                    <a href="#about" class="footer__link">About</a>
+                    <a href="#about" class="footer__link" data-i18n="about">About</a>
                 </li>
                 <li>
-                    <a href="#work" class="footer__link">Projects</a>
+                    <a href="#work" class="footer__link" data-i18n="projects">Projects</a>
                 </li>
                 <li>
-                    <a href="#skills" class="footer__link">Experience</a>
+                    <a href="#skills" class="footer__link" data-i18n="experiences">Experience</a>
                 </li>
             </ul>
 
@@ -336,7 +341,7 @@
                 </a>
             </ul>
 
-            <span class="footer__copyright">
+            <span class="footer__copyright" data-i18n="copyright">
             </span>
         </div>
     </footer>
@@ -348,7 +353,7 @@
     </a>
 
     <!--#region JS -->
-    <script type="module" src="script.js"></script>
+    <script type="module" src="main.js"></script>
     <script src="./external/js/scrollreveal.js"></script>
     <script src="./external/js/swiper-bundle.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
