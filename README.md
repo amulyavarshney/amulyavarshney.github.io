@@ -1,8 +1,4 @@
 <p align="center">
-  <img src="docs/readme-banner.png" alt="Amulya Varshney — Software Engineer 2, Applied AI" width="100%" />
-</p>
-
-<p align="center">
   <a href="https://amulyavarshney.github.io"><img src="https://img.shields.io/badge/Live_Site-amulyavarshney.github.io-0ea5e9?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live site" /></a>
   <a href="https://github.com/amulyavarshney"><img src="https://img.shields.io/badge/GitHub-amulyavarshney-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
   <a href="https://www.linkedin.com/in/varamu/"><img src="https://img.shields.io/badge/LinkedIn-varamu-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
@@ -99,7 +95,7 @@ Sitemap generation (`scripts/generate-sitemap.ts`) runs automatically before `de
 ## Project layout
 
 ```text
-docs/                 README graphics (banner, circular profile)
+docs/                 README graphics (circular profile)
 src/
   components/         Layout, portfolio sections, playground labs, UI
   data/               Projects, case studies, playground definitions
