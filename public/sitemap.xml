@@ -100,6 +100,17 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://amulyavarshney.github.io/blogs/ai-engineer-job-requirements" />
   </url>
   <url>
+    <loc>https://amulyavarshney.github.io/blogs/multi-agent-eval-guide</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://amulyavarshney.github.io/en/blogs/multi-agent-eval-guide" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://amulyavarshney.github.io/hi/blogs/multi-agent-eval-guide" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://amulyavarshney.github.io/de/blogs/multi-agent-eval-guide" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://amulyavarshney.github.io/fr/blogs/multi-agent-eval-guide" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://amulyavarshney.github.io/es/blogs/multi-agent-eval-guide" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://amulyavarshney.github.io/blogs/multi-agent-eval-guide" />
+  </url>
+  <url>
     <loc>https://amulyavarshney.github.io/contact</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

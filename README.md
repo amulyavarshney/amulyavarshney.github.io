@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/readme-banner.svg" alt="Amulya Varshney — Software Engineer 2, Applied AI" width="100%" />
+  <img src="docs/readme-banner.png" alt="Amulya Varshney — Software Engineer 2, Applied AI" width="100%" />
 </p>
 
 <p align="center">
@@ -99,7 +99,7 @@ Sitemap generation (`scripts/generate-sitemap.ts`) runs automatically before `de
 ## Project layout
 
 ```text
-docs/                 README graphics (banner SVG, circular profile)
+docs/                 README graphics (banner, circular profile)
 src/
   components/         Layout, portfolio sections, playground labs, UI
   data/               Projects, case studies, playground definitions

@@ -1,20 +1,29 @@
 // Runs before `vite dev` and `vite build`; writes public/sitemap.xml.
 import { writeFileSync } from "fs";
-import { resolve } from "path";
+import { resolve, dirname } from "path";
+import { fileURLToPath } from "url";
 
+const __dirname = dirname(fileURLToPath(import.meta.url));
 const BASE_URL = "https://amulyavarshney.github.io";
 
 const LANGS = ["en", "hi", "de", "fr", "es"];
-const PATHS = ["", "portfolio", "projects", "services", "playground", "blogs", "blogs/applied-ai-engineer-roadmap", "blogs/qdrant-fastapi-grpc-guide", "blogs/ai-engineer-job-requirements", "blogs/multi-agent-eval-guide", "contact", "projects/case-study/payroll-intelligence-agent", "projects/case-study/ray-fintech-concierge"];
+const PATHS = [
+  "",
+  "portfolio",
+  "projects",
+  "services",
+  "playground",
+  "blogs",
+  "blogs/applied-ai-engineer-roadmap",
+  "blogs/qdrant-fastapi-grpc-guide",
+  "blogs/ai-engineer-job-requirements",
+  "blogs/multi-agent-eval-guide",
+  "contact",
+  "projects/case-study/payroll-intelligence-agent",
+  "projects/case-study/ray-fintech-concierge",
+];
 
-interface Entry {
-  path: string;
-  changefreq: string;
-  priority: string;
-  alternates: { lang: string; href: string }[];
-}
-
-const entries: Entry[] = PATHS.map((p) => {
+const entries = PATHS.map((p) => {
   const canonical = p ? `/${p}` : `/`;
   return {
     path: canonical,
@@ -46,5 +55,5 @@ const xml = [
   `</urlset>`,
 ].join("\n");
 
-writeFileSync(resolve("public/sitemap.xml"), xml);
+writeFileSync(resolve(__dirname, "../public/sitemap.xml"), xml);
 console.log(`sitemap.xml written (${entries.length} entries)`);

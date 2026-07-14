@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Navigate, Outlet, useLocation, useNavigate, useParams } from "react-router-dom";
+import { Navigate, Outlet, useLocation, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { languages } from "@/i18n";
 
@@ -44,16 +44,10 @@ export const LanguageRoute = () => {
   const { lang } = useParams<{ lang: string }>();
   const { i18n } = useTranslation();
   const location = useLocation();
-
-  // Invalid lang → the ":lang" segment is actually a page path (e.g. /portfolio).
-  // Redirect to the detected lang, preserving the original path.
-  if (!lang || !SUPPORTED.includes(lang)) {
-    const fallback = resolveInitialLang();
-    return <Navigate to={withLang(fallback, location.pathname)} replace />;
-  }
-
+  const valid = Boolean(lang && SUPPORTED.includes(lang));
 
   useEffect(() => {
+    if (!valid || !lang) return;
     if (i18n.resolvedLanguage !== lang) {
       i18n.changeLanguage(lang);
     }
@@ -63,7 +57,14 @@ export const LanguageRoute = () => {
       /* ignore quota */
     }
     document.documentElement.lang = lang;
-  }, [lang, i18n]);
+  }, [lang, i18n, valid]);
+
+  // Invalid lang → the ":lang" segment is actually a page path (e.g. /portfolio).
+  // Redirect to the detected lang, preserving the original path.
+  if (!valid) {
+    const fallback = resolveInitialLang();
+    return <Navigate to={withLang(fallback, location.pathname)} replace />;
+  }
 
   return <Outlet />;
 };
