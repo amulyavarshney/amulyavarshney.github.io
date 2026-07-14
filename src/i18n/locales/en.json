@@ -1,0 +1,577 @@
+{
+  "nav": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "projects": "Projects",
+    "services": "Services",
+    "playground": "Playground",
+    "blogs": "Blogs",
+    "contact": "Contact"
+  },
+  "common": {
+    "language": "Language",
+    "viewProjects": "View Projects",
+    "explorePlayground": "Explore Playground",
+    "contactMe": "Contact Me",
+    "requestCv": "Request CV",
+    "available": "Available for Collaborations & Opportunities",
+    "present": "Present",
+    "current": "Current",
+    "code": "Code",
+    "skills": "skills"
+  },
+  "hero": {
+    "iAm": "Hi, I'm",
+    "iBuild": "I build",
+    "phrases": [
+      "AI-driven systems",
+      "multi-agent workflows",
+      "full-stack applications",
+      "scalable backend platforms",
+      "LLMOps and evaluation pipelines"
+    ],
+    "bio": "Software engineer working on applied AI: multi-agent workflows, RAG, LLMOps, and the full-stack products around them. I care about shipping things that actually work in production.",
+    "requestCvTitle": "Request CV via contact form"
+  },
+  "about": {
+    "eyebrow": "About Me",
+    "titlePre": "The Story Behind the",
+    "titleAccent": "Code",
+    "subtitle": "Engineer focused on applied AI, multi-agent systems, and production full-stack products.",
+    "paragraph": "I mix CS fundamentals and competitive programming with product engineering. Right now I'm mostly working on {{a}}, {{b}}, {{c}}, and production RAG systems.",
+    "llmops": "LLMOps",
+    "agents": "AI agents",
+    "evals": "evaluation pipelines",
+    "currentlyAt": "currently_at",
+    "currentlyAtValue": "Intuit · Applied AI",
+    "path": "~/about/amulya"
+  },
+  "stats": [
+    {
+      "label": "LeetCode",
+      "value": "Knight",
+      "sub": "1900+ Rating"
+    },
+    {
+      "label": "Codeforces",
+      "value": "CM",
+      "sub": "1900+ Rating"
+    },
+    {
+      "label": "HackerRank",
+      "value": "6★",
+      "sub": "Problem Solving"
+    },
+    {
+      "label": "B.Tech CSE",
+      "value": "9.23",
+      "sub": "CGPA / 10"
+    },
+    {
+      "label": "Kickstart '22 R-E",
+      "value": "#209",
+      "sub": "Global Rank"
+    }
+  ],
+  "now": {
+    "eyebrow": "Now",
+    "titlePre": "What I'm",
+    "titleAccent": "Working On",
+    "subtitle": "A snapshot of what I'm building, learning, and reading this month.",
+    "updated": "Updated monthly",
+    "items": [
+      {
+        "title": "Building",
+        "text": "A multi-agent eval harness on LangGraph and Langfuse. Traces, judge models, and regression gates for agent workflows."
+      },
+      {
+        "title": "Learning",
+        "text": "Hybrid retrieval, cross-encoder reranking, and structured RAG over enterprise knowledge graphs."
+      },
+      {
+        "title": "Reading",
+        "text": "Papers on tool-use agents, LLM-as-judge reliability, and inference-time compute scaling."
+      }
+    ]
+  },
+  "portfolio": {
+    "eyebrow": "Portfolio",
+    "titlePre": "Education &",
+    "titleAccent": "Experience",
+    "subtitle": "From competitive CS to shipping AI agents in production.",
+    "education": "Education",
+    "experience": "Experience"
+  },
+  "education": [
+    {
+      "institution": "International Institute of Information Technology, Naya Raipur",
+      "degree": "B.Tech, Computer Science & Engineering",
+      "duration": "2019 — 2023",
+      "grade": "CGPA 9.23 / 10.00",
+      "courses": [
+        "Operating Systems",
+        "Data Structures",
+        "Analysis of Algorithms",
+        "OOP",
+        "System Design",
+        "Databases"
+      ]
+    },
+    {
+      "institution": "Stanford Continuing Studies",
+      "degree": "Agentic AI in Action: From Concepts to Real-World Impact",
+      "duration": "2025",
+      "grade": "Professional Program",
+      "courses": [
+        "Agentic AI",
+        "LLM Orchestration",
+        "Tool Use",
+        "Evaluation",
+        "Production Patterns"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "role": "Software Engineer 2 — Applied AI",
+      "company": "Intuit",
+      "location": "Bangalore, India",
+      "duration": "May 2025 — Present",
+      "highlights": [
+        "Led design of a Payroll Intelligence Agent with multi-agent workflows and eval loops. Cut median latency by 38% vs. the single-prompt baseline and lifted answer accuracy by 22% on the golden eval set.",
+        "Wired Langfuse tracing into every graph node. Trace coverage went to 100% of turns and on-call debugging dropped from hours to minutes.",
+        "Architected LangGraph orchestration with tool-calling, skill routing, guardrails, and RAG retrieval. Powers 4+ payroll skills behind one entry point.",
+        "Held p95 latency flat through query caching and zero-downtime online migrations, even as ingested policy volume doubled.",
+        "Shipped a PR-blocking regression suite. Judge models run over golden turns nightly and on demand, so prompt regressions get caught before merge."
+      ]
+    },
+    {
+      "role": "Software Development Engineer",
+      "company": "Razorpay",
+      "location": "Bangalore, India",
+      "duration": "Aug 2024 — May 2025",
+      "highlights": [
+        "Built 'Ray', an AI-powered fintech concierge on LLMs, LangGraph, and FastAPI. First-response time on auto-resolved tickets dropped from hours to seconds.",
+        "Automated a large share of merchant support workflows behind feature flags with human-in-the-loop review, so rollout stayed safe and gradual.",
+        "Wrote a Go eval engine that runs prompt suites concurrently. About 10x faster than the previous sequential runner, which unlocked daily prompt iteration.",
+        "Shipped multi-agent ticket resolution with context-aware processing and dynamic priority scoring. Urgent tickets jump the queue automatically."
+      ]
+    },
+    {
+      "role": "Software Engineer",
+      "company": "Zeiss",
+      "location": "Bangalore, India",
+      "duration": "Jan 2023 — Jul 2024",
+      "highlights": [
+        "Built secure REST APIs in Java and Spring Boot with role-based auth, serving 20+ downstream services across enterprise modules.",
+        "Shipped real-time gRPC notification services for critical alerts. Cross-service event latency went from seconds to sub-100ms.",
+        "Extended enterprise modules in C# and ASP.NET using patterns that got adopted across 3 product lines.",
+        "Built a reusable React and TypeScript component library (30+ components). Standardized internal UX and cut new-screen build time by about 40%."
+      ]
+    }
+  ],
+  "skills": {
+    "eyebrow": "Skills",
+    "titlePre": "A Versatile",
+    "titleAccent": "Engineering Toolkit",
+    "subtitle": "Languages, frameworks, AI, infrastructure. Composed for shipping reliable products.",
+    "categories": [
+      "Languages",
+      "AI / LLM / Agents",
+      "Backend",
+      "Frontend",
+      "DevOps & Tools",
+      "Databases & Cloud"
+    ]
+  },
+  "achievements": {
+    "eyebrow": "Achievements",
+    "titlePre": "Milestones &",
+    "titleAccent": "Recognitions",
+    "subtitle": "A trail of competitive results, academic honors, and consistent problem-solving.",
+    "items": [
+      {
+        "title": "Google Kickstart 2022 — Round E",
+        "metric": "Global #209 · India #37",
+        "note": "Out of 20,000+ participants"
+      },
+      {
+        "title": "Codeforces Contest",
+        "metric": "Global #73 · India <10",
+        "note": "15,000+ participants"
+      },
+      {
+        "title": "CSE Department — Year 1",
+        "metric": "First Rank · GPA 9.64",
+        "note": "IIIT Naya Raipur"
+      },
+      {
+        "title": "Web Dev Hackathon — HBTU Kanpur",
+        "metric": "Runner-Up",
+        "note": "10,000+ participants (2018)"
+      },
+      {
+        "title": "UP Science & Tech Council Fellowship",
+        "metric": "Shortlisted",
+        "note": "From 50,000+ applicants (2017)"
+      },
+      {
+        "title": "LeetCode",
+        "metric": "Knight — 1900+",
+        "note": "Top Problem Solver"
+      },
+      {
+        "title": "Codeforces",
+        "metric": "Candidate Master",
+        "note": "1900+ Rating"
+      },
+      {
+        "title": "HackerRank",
+        "metric": "6★",
+        "note": "Problem Solving"
+      }
+    ]
+  },
+  "projects": {
+    "eyebrow": "Projects",
+    "titlePre": "Featured &",
+    "titleAccent": "Live from GitHub",
+    "subtitle": "Curated production work plus the latest open-source repositories, auto-synced from GitHub.",
+    "curatedBadge": "Curated",
+    "searchPlaceholder": "Search repositories…",
+    "filters": {
+      "All": "All",
+      "Featured": "Featured",
+      "AI": "AI",
+      "Full Stack": "Full Stack",
+      "Backend": "Backend",
+      "Python": "Python",
+      "TypeScript": "TypeScript",
+      "Java": "Java",
+      "C#": "C#"
+    },
+    "noResults": "No repositories match your filters.",
+    "noDescription": "No description provided.",
+    "errorPre": "Couldn't load GitHub repositories right now. Visit",
+    "curated": [
+      {
+        "title": "Payroll Intelligence Agent",
+        "description": "Multi-agent copilot for enterprise payroll. Routes intents, calls tools, retrieves policy with RAG, and gates every prompt change through a judged eval set. Cut median latency by 38% and lifted accuracy 22% on the golden set."
+      },
+      {
+        "title": "Ray — Fintech AI Concierge",
+        "description": "LLM-powered merchant support that turns hours-long tickets into second-level answers. Multi-agent orchestration in Python, Go eval engine that runs 10x faster than the sequential runner, rollout gated by feature flags and human review."
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "Services",
+    "titlePre": "How I Can",
+    "titleAccent": "Help You Ship",
+    "subtitle": "From AI agents to backend platforms. Practical engineering that moves the needle.",
+    "items": [
+      {
+        "title": "AI Agent Development",
+        "description": "Multi-agent workflows, LangGraph orchestration, tool-calling, guardrails, evaluation, and observability."
+      },
+      {
+        "title": "RAG & LLM Applications",
+        "description": "Retrieval-augmented generation, vector databases, embeddings, knowledge bases, prompt evaluation."
+      },
+      {
+        "title": "Full-Stack Product Development",
+        "description": "React, Next.js, TypeScript, backend APIs, databases, dashboards, and responsive products."
+      },
+      {
+        "title": "Backend & System Architecture",
+        "description": "Java/Spring Boot, FastAPI, Golang, distributed systems, gRPC, caching, and high availability."
+      },
+      {
+        "title": "Cloud & DevOps Engineering",
+        "description": "Docker, Kubernetes, CI/CD, Azure, AWS, GCP, and monitoring with Prometheus and Grafana."
+      },
+      {
+        "title": "Mentorship & Problem Solving",
+        "description": "Competitive programming, DSA, system design, interview preparation, and clean coding practices."
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Testimonials",
+    "titlePre": "What Clients",
+    "titleAccent": "Are Saying",
+    "subtitle": "Feedback from founders, CTOs, and product leads I've worked with across Europe, Asia, and the Americas.",
+    "prev": "Previous testimonial",
+    "next": "Next testimonial",
+    "items": [
+      {
+        "name": "Lukas Vogel",
+        "role": "CTO",
+        "organization": "Helix Analytics, Berlin",
+        "quote": "Amulya rebuilt our agent orchestration from scratch. Latency dropped by half and our hallucination rate is finally under control. He owns the problem end to end."
+      },
+      {
+        "name": "Sofia Marchetti",
+        "role": "Head of AI",
+        "organization": "Nordwave Studio, Milan",
+        "quote": "We hired Amulya to ship a RAG pipeline in four weeks. He delivered in three, with eval dashboards, traces, and a clean handoff to my team."
+      },
+      {
+        "name": "Hiroshi Tanaka",
+        "role": "Engineering Director",
+        "organization": "Kaiyo Robotics, Tokyo",
+        "quote": "Rare combination of deep ML intuition and production discipline. Our LLM eval infra is the most reliable piece of the stack now."
+      },
+      {
+        "name": "Élodie Laurent",
+        "role": "Product Lead",
+        "organization": "Lumen Atelier, Paris",
+        "quote": "Calm, fast, and unusually clear in writing. Amulya turned a vague AI feature brief into a shipped product our users actually understand."
+      },
+      {
+        "name": "Daniel O'Connor",
+        "role": "VP Engineering",
+        "organization": "Ardent Labs, Dublin",
+        "quote": "He plugged into our team in days, not weeks. Honest about trade-offs, ruthless about scope, and the code he leaves behind is maintainable."
+      }
+    ]
+  },
+  "playground": {
+    "eyebrow": "Playground",
+    "titlePre": "An Interactive",
+    "titleAccent": "Engineering Lab",
+    "subtitle": "Mini demos: agent flows, retrieval, code, and a hackable terminal.",
+    "agentFlow": {
+      "title": "Agent Workflow",
+      "nodes": {
+        "user": "User Query",
+        "router": "Router",
+        "tools": "Tools",
+        "rag": "RAG",
+        "eval": "Evaluator",
+        "out": "Response"
+      },
+      "caption": "▸ routing · tool-calling · retrieval · evaluation · response"
+    },
+    "terminal": {
+      "title": "Mini Terminal",
+      "placeholder": "Type a command…",
+      "ariaLabel": "Terminal command",
+      "helpHint": "Try: skills · projects · experience · achievements · social · clear",
+      "helpFull": "Commands: whoami · skills · projects · experience · achievements · social · clear",
+      "projectsOut": "Visit the Projects page to see live GitHub repos and curated work.",
+      "notFound": "command not found: {{cmd}} — try \"help\""
+    },
+    "rag": {
+      "title": "RAG Retrieval Demo",
+      "query": "\"How do I evaluate agent responses?\"",
+      "answer": "Use offline eval sets, automated scoring across routing/tooling/response layers, and Langfuse traces for production observability.",
+      "docs": [
+        {
+          "title": "LangGraph Orchestration"
+        },
+        {
+          "title": "RAG Evaluation Loops"
+        },
+        {
+          "title": "Vector DB Indexing"
+        }
+      ]
+    },
+    "snippet": {
+      "title": "Agent Graph Snippet",
+      "copy": "Copy code"
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "titlePre": "Let's Build Something",
+    "titleAccent": "Useful",
+    "subtitle": "Send a message through the secure form. No email or phone exposed. I reply to real inquiries.",
+    "name": "Name",
+    "namePlaceholder": "Jane Doe",
+    "organization": "Organization",
+    "organizationPlaceholder": "Company / Team",
+    "subject": "Subject",
+    "subjectPlaceholder": "Quick Intro",
+    "reason": "Reason",
+    "message": "Message",
+    "messagePlaceholder": "Share context, links, timelines…",
+    "required": "*",
+    "spamNote": "Spam-Protected · No Email Shown",
+    "send": "Send Message",
+    "sending": "Sending…",
+    "sent": "Sent",
+    "toastTitle": "Message Received",
+    "toastDesc": "Thanks. I'll get back to you soon.",
+    "findOnline": "Find Me Online",
+    "bestFits": "Best Fits",
+    "bestFitsList": [
+      "Applied AI · Agents · RAG",
+      "Backend / Full-Stack Roles",
+      "Technical Mentorship",
+      "Speaking & Collaborations"
+    ],
+    "reasons": {
+      "Collaboration": "Collaboration",
+      "Job Opportunity": "Job Opportunity",
+      "Freelance": "Freelance",
+      "Mentorship": "Mentorship",
+      "Speaking": "Speaking",
+      "Other": "Other"
+    },
+    "errors": {
+      "name": "Please enter your name.",
+      "subject": "Add a short subject.",
+      "message": "Tell me a little more (20+ characters).",
+      "spam": "Spam detected."
+    }
+  },
+  "blogs": {
+    "eyebrow": "Writing",
+    "titlePre": "Articles &",
+    "titleAccent": "Insights",
+    "subtitle": "Longer notes on AI engineering, agents, and full-stack systems. Synced from Medium.",
+    "readMore": "Read on Medium",
+    "readFullPost": "Read full post",
+    "loading": "Fetching latest posts…",
+    "empty": "No posts available yet. Check back soon.",
+    "error": "Couldn't load posts right now.",
+    "visitMedium": "Visit Medium →"
+  },
+  "footer": {
+    "tagline": "Building AI-driven systems and scalable full-stack products.",
+    "navigate": "Navigate",
+    "connect": "Connect",
+    "copy": "© {{year}} Amulya Varshney.",
+    "version": "v1.0 · Built for Performance"
+  },
+  "volunteer": {
+    "eyebrow": "Volunteering",
+    "titlePre": "Community &",
+    "titleAccent": "Mentorship",
+    "subtitle": "Teaching, mentoring, and organizing. Giving back to student and developer communities.",
+    "items": [
+      {
+        "role": "Course Instructor",
+        "org": "Crio.Do",
+        "period": "Aug 2022 – Jan 2023 · 6 mos",
+        "cause": "Education",
+        "bullets": [
+          "Mentored 200+ students in programming and full-stack development projects by personally answering doubts and providing individualized guidance."
+        ]
+      },
+      {
+        "role": "Problem Analyst",
+        "org": "GeeksforGeeks",
+        "period": "Mar 2022 – Aug 2022 · 6 mos",
+        "cause": "Education",
+        "bullets": [
+          "Reviewed 1000+ programming problems and scripts for potential errors.",
+          "Provided solutions to 2500+ doubts across technical courses and contests on the platform."
+        ]
+      },
+      {
+        "role": "Instructor",
+        "org": "HeyCoach",
+        "period": "Dec 2021 – Feb 2022 · 3 mos",
+        "cause": "Education",
+        "bullets": [
+          "Mentored 30+ students personally by solving doubts on DSA, programming, and web development.",
+          "Built a GitHub repository of 10+ projects and 100+ assessments to evaluate candidates across concepts and skills."
+        ]
+      },
+      {
+        "role": "Programs and Events Head",
+        "org": "E-Cell, IIIT Naya Raipur",
+        "period": "Nov 2020 – Dec 2021 · 1 yr 2 mos",
+        "bullets": [
+          "Encouraged undergraduate students to start businesses based on their visions for a better future.",
+          "Conducted a stock trading competition that engaged 350+ youngsters worldwide to promote financial awareness.",
+          "Organized the Entrepreneurship Summit, which attracted 2600+ students and 20+ speakers."
+        ]
+      },
+      {
+        "role": "Core Member",
+        "org": "ComET, IIIT Naya Raipur",
+        "period": "Aug 2020 – Jul 2021 · 1 yr",
+        "cause": "Science & Technology",
+        "bullets": [
+          "Assisted in organizing events to engage young enthusiasts in learning basic electronics and clearing their doubts.",
+          "Built projects on IoT, 3D printing, electronic devices, sensors, and actuators."
+        ]
+      }
+    ]
+  },
+  "certifications": {
+    "eyebrow": "Licenses & Certifications",
+    "titlePre": "Credentials &",
+    "titleAccent": "Certifications",
+    "subtitle": "Formal training in Generative AI, multi-agent systems, and cloud AI platforms.",
+    "issued": "Issued",
+    "credential": "Credential ID",
+    "skills": "Skills",
+    "items": [
+      {
+        "name": "Developing Generative AI Applications on AWS",
+        "issuer": "Amazon Web Services (AWS)",
+        "logo": "aws",
+        "issued": "Nov 2024",
+        "credentialId": "e4zYPeXSekqeWN7-39QiDQ2",
+        "skills": [
+          "Amazon Bedrock",
+          "Generative AI",
+          "LLMs",
+          "Prompt Engineering",
+          "Cloud AI"
+        ]
+      },
+      {
+        "name": "Multi AI Agent Systems with crewAI",
+        "issuer": "DeepLearning.AI",
+        "logo": "deeplearning",
+        "issued": "Nov 2024",
+        "credentialId": "",
+        "skills": [
+          "Chatbots",
+          "Generative AI Tools",
+          "Multi-Agent Systems"
+        ]
+      }
+    ]
+  },
+  "seo": {
+    "home": {
+      "title": "Amulya Varshney — Applied AI & Full-Stack Engineer",
+      "description": "Applied AI engineer building multi-agent systems, RAG pipelines, LLMOps, and scalable full-stack products."
+    },
+    "portfolio": {
+      "title": "Portfolio — Amulya Varshney",
+      "description": "Education, experience, skills, and achievements across Applied AI, backend, and full-stack engineering."
+    },
+    "projects": {
+      "title": "Projects — Amulya Varshney",
+      "description": "Featured AI agent, RAG, and full-stack projects, auto-synced with the latest GitHub repositories."
+    },
+    "services": {
+      "title": "Services — Amulya Varshney",
+      "description": "AI agent development, RAG and LLM apps, full-stack product engineering, backend architecture, and DevOps."
+    },
+    "playground": {
+      "title": "Playground — Amulya Varshney",
+      "description": "Interactive demos: AI agent workflows, RAG retrieval, LangGraph visualizations, mini games to learn LLMs."
+    },
+    "blogs": {
+      "title": "Blogs — Amulya Varshney",
+      "description": "Notes on AI engineering, agents, RAG, and full-stack systems. Synced from Medium."
+    },
+    "contact": {
+      "title": "Contact — Amulya Varshney",
+      "description": "Get in touch about Applied AI, full-stack roles, freelance collaborations, mentorship, or speaking."
+    },
+    "notFound": {
+      "title": "Page Not Found — Amulya Varshney",
+      "description": "The page you're looking for doesn't exist. Return to the portfolio home page."
+    }
+  }
+}

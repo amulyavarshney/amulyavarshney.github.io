@@ -1,0 +1,336 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "portfolio": "Portafolio",
+    "projects": "Proyectos",
+    "services": "Servicios",
+    "playground": "Playground",
+    "blogs": "Blogs",
+    "contact": "Contacto"
+  },
+  "common": {
+    "language": "Idioma",
+    "viewProjects": "Ver proyectos",
+    "explorePlayground": "Explorar Playground",
+    "contactMe": "Contáctame",
+    "requestCv": "Solicitar CV",
+    "available": "Disponible para colaboraciones y oportunidades",
+    "present": "Actualidad",
+    "current": "Actual",
+    "code": "Código",
+    "skills": "Skills"
+  },
+  "hero": {
+    "iAm": "Hola, soy",
+    "iBuild": "Construyo ",
+    "phrases": [
+      "sistemas impulsados por IA",
+      "flujos multi-agente",
+      "aplicaciones full-stack",
+      "plataformas backend escalables",
+      "pipelines de LLMOps y evaluación"
+    ],
+    "bio": "Ingeniero de software enfocado en IA aplicada: flujos multi-agente, RAG, LLMOps y los productos full-stack alrededor. Me interesa lo que funciona de verdad en producción.",
+    "requestCvTitle": "Solicitar CV mediante el formulario de contacto"
+  },
+  "about": {
+    "eyebrow": "Sobre mí",
+    "titlePre": "La historia detrás del",
+    "titleAccent": "Código",
+    "subtitle": "Ingeniero centrado en IA aplicada, sistemas multi-agente y productos full-stack en producción.",
+    "paragraph": "Combino fundamentos de CS y programación competitiva con ingeniería de producto. Ahora mismo trabajo sobre todo en {{a}}, {{b}}, {{c}} y sistemas RAG en producción.",
+    "llmops": "LLMOps",
+    "agents": "agentes de IA",
+    "evals": "pipelines de evaluación",
+    "currentlyAt": "currently_at",
+    "currentlyAtValue": "Intuit · Applied AI",
+    "path": "~/about/amulya"
+  },
+  "stats": [
+    { "label": "LeetCode", "value": "Knight", "sub": "1900+ Rating" },
+    { "label": "Codeforces", "value": "CM", "sub": "1900+ Rating" },
+    { "label": "HackerRank", "value": "6★", "sub": "Resolución de problemas" },
+    { "label": "B.Tech CSE", "value": "9,23", "sub": "CGPA / 10" },
+    { "label": "Kickstart '22 R-E", "value": "#209", "sub": "Ranking global" }
+  ],
+  "now": {
+    "eyebrow": "Ahora",
+    "titlePre": "En qué estoy",
+    "titleAccent": "trabajando",
+    "subtitle": "Una foto de lo que estoy construyendo, aprendiendo y leyendo este mes.",
+    "updated": "Actualizado mensualmente",
+    "items": [
+      { "title": "Construyendo", "text": "Un arnés de evaluación multi-agente sobre LangGraph y Langfuse. Trazas, modelos juez y gates de regresión para flujos de agentes." },
+      { "title": "Aprendiendo", "text": "Retrieval híbrido, reranking con cross-encoder y RAG estructurado sobre knowledge graphs de empresa." },
+      { "title": "Leyendo", "text": "Papers sobre agentes con tool-use, fiabilidad de LLM-como-juez y escalado de compute en inferencia." }
+    ]
+  },
+  "portfolio": {
+    "eyebrow": "Portafolio",
+    "titlePre": "Formación y",
+    "titleAccent": "Experiencia",
+    "subtitle": "De algoritmia competitiva a entregar agentes de IA en producción.",
+    "education": "Formación",
+    "experience": "Experiencia"
+  },
+  "education": [
+    {
+      "institution": "International Institute of Information Technology, Naya Raipur",
+      "degree": "B.Tech, Computer Science & Engineering",
+      "duration": "2019 — 2023",
+      "grade": "CGPA 9,23 / 10,00",
+      "courses": ["Sistemas operativos", "Estructuras de datos", "Análisis de algoritmos", "POO", "Diseño de sistemas", "Bases de datos"]
+    },
+    {
+      "institution": "Stanford Continuing Studies",
+      "degree": "Agentic AI in Action: de los conceptos al impacto real",
+      "duration": "2025",
+      "grade": "Programa profesional",
+      "courses": ["Agentic AI", "Orquestación de LLM", "Tool Use", "Evaluación", "Patrones de producción"]
+    }
+  ],
+  "experience": [
+    {
+      "role": "Software Engineer 2 — Applied AI",
+      "company": "Intuit",
+      "location": "Bangalore, India",
+      "duration": "May 2025 — Actualidad",
+      "highlights": [
+        "Lideré el diseño de un Payroll Intelligence Agent con flujos multi-agente y bucles de evaluación. Latencia mediana reducida un 38 % vs. la baseline de un solo prompt y precisión de respuesta subida un 22 % en el golden eval set.",
+        "Integré tracing con Langfuse en cada nodo del grafo. Cobertura de trazas al 100 % de los turnos y el debug on-call bajó de horas a minutos.",
+        "Arquitecté la orquestación con LangGraph con tool-calling, routing de skills, guardrails y retrieval RAG. Impulsa 4+ skills de payroll detrás de un único entry point.",
+        "Mantuve la latencia p95 estable con caching de queries y migraciones online sin downtime, aun con el volumen de policies ingeridas duplicándose.",
+        "Entregué una suite de regresión que bloquea PRs. Los modelos juez corren cada noche y bajo demanda sobre los golden turns, así las regresiones de prompt se cazan antes del merge."
+      ]
+    },
+    {
+      "role": "Software Development Engineer",
+      "company": "Razorpay",
+      "location": "Bangalore, India",
+      "duration": "Ago 2024 — May 2025",
+      "highlights": [
+        "Construí 'Ray', un concierge fintech basado en LLMs, LangGraph y FastAPI. El tiempo de primera respuesta en tickets auto-resueltos cayó de horas a segundos.",
+        "Automaticé buena parte de los flujos de soporte a comercios detrás de feature flags con revisión human-in-the-loop, para un rollout seguro y gradual.",
+        "Escribí un motor de evaluación en Go que ejecuta suites de prompts en paralelo. Unas 10 veces más rápido que el runner secuencial previo, lo que desbloqueó la iteración diaria de prompts.",
+        "Entregué resolución multi-agente de tickets con procesamiento context-aware y priority scoring dinámico. Los tickets urgentes suben en la cola de forma automática."
+      ]
+    },
+    {
+      "role": "Software Engineer",
+      "company": "Zeiss",
+      "location": "Bangalore, India",
+      "duration": "Ene 2023 — Jul 2024",
+      "highlights": [
+        "Construí APIs REST seguras en Java y Spring Boot con auth basada en roles, sirviendo a 20+ servicios downstream en módulos de empresa.",
+        "Entregué servicios de notificación gRPC en tiempo real para alertas críticas. La latencia de eventos entre servicios bajó de segundos a menos de 100 ms.",
+        "Extendí módulos de empresa en C# y ASP.NET con patrones que se adoptaron en 3 líneas de producto.",
+        "Construí una librería de componentes React y TypeScript reutilizables (30+ componentes). UX interna estandarizada y tiempo de construcción de nuevas pantallas reducido un 40 % aproximado."
+      ]
+    }
+  ],
+  "skills": {
+    "eyebrow": "Skills",
+    "titlePre": "Un kit de ingeniería",
+    "titleAccent": "versátil",
+    "subtitle": "Lenguajes, frameworks, IA, infraestructura. Combinados para entregar productos fiables.",
+    "categories": ["Lenguajes", "AI / LLM / Agents", "Backend", "Frontend", "DevOps y herramientas", "Bases de datos y Cloud"]
+  },
+  "achievements": {
+    "eyebrow": "Logros",
+    "titlePre": "Hitos y",
+    "titleAccent": "Reconocimientos",
+    "subtitle": "Un rastro de resultados competitivos, méritos académicos y resolución constante de problemas.",
+    "items": [
+      { "title": "Google Kickstart 2022 — Ronda E", "metric": "Global #209 · India #37", "note": "Entre 20 000+ participantes" },
+      { "title": "Concurso Codeforces", "metric": "Global #73 · India <10", "note": "15 000+ participantes" },
+      { "title": "Departamento CSE — 1er año", "metric": "Primer puesto · GPA 9,64", "note": "IIIT Naya Raipur" },
+      { "title": "Hackathon Web Dev — HBTU Kanpur", "metric": "Finalista", "note": "10 000+ participantes (2018)" },
+      { "title": "UP Science & Tech Council Fellowship", "metric": "Preseleccionado", "note": "Entre 50 000+ candidatos (2017)" },
+      { "title": "LeetCode", "metric": "Knight — 1900+", "note": "Top problem solver" },
+      { "title": "Codeforces", "metric": "Candidate Master", "note": "1900+ Rating" },
+      { "title": "HackerRank", "metric": "6★", "note": "Resolución de problemas" }
+    ]
+  },
+  "projects": {
+    "eyebrow": "Proyectos",
+    "titlePre": "Destacados y",
+    "titleAccent": "En vivo desde GitHub",
+    "subtitle": "Trabajo de producción seleccionado más los últimos repositorios open-source, auto-sincronizados desde GitHub.",
+    "curatedBadge": "Seleccionado",
+    "searchPlaceholder": "Buscar repositorios…",
+    "filters": {
+      "All": "Todos",
+      "Featured": "Destacados",
+      "AI": "IA",
+      "Full Stack": "Full Stack",
+      "Backend": "Backend",
+      "Python": "Python",
+      "TypeScript": "TypeScript",
+      "Java": "Java",
+      "C#": "C#"
+    },
+    "noResults": "Ningún repositorio coincide con tus filtros.",
+    "noDescription": "Sin descripción.",
+    "errorPre": "No se pudieron cargar los repositorios de GitHub ahora mismo. Visita",
+    "curated": [
+      {
+        "title": "Payroll Intelligence Agent",
+        "description": "Copiloto multi-agente para nómina de empresa. Rutea intenciones, llama herramientas, recupera policies con RAG y pasa cada cambio de prompt por un eval set juzgado. Latencia mediana reducida un 38 % y precisión subida un 22 % en el golden set."
+      },
+      {
+        "title": "Ray — Fintech AI Concierge",
+        "description": "Soporte a comercios basado en LLM que convierte tickets de horas en respuestas de segundos. Orquestación multi-agente en Python, motor de evaluación en Go 10× más rápido que el runner secuencial, rollout con feature flags y revisión humana."
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "Servicios",
+    "titlePre": "Cómo puedo",
+    "titleAccent": "ayudarte a entregar",
+    "subtitle": "De agentes de IA a plataformas backend. Ingeniería pragmática que mueve la aguja.",
+    "items": [
+      { "title": "Desarrollo de agentes de IA", "description": "Flujos multi-agente, orquestación con LangGraph, tool-calling, guardrails, evaluación y observabilidad." },
+      { "title": "Aplicaciones RAG y LLM", "description": "Retrieval-augmented generation, bases vectoriales, embeddings, bases de conocimiento y evaluación de prompts." },
+      { "title": "Desarrollo de producto full-stack", "description": "React, Next.js, TypeScript, APIs backend, bases de datos, dashboards y productos responsive." },
+      { "title": "Arquitectura backend y de sistemas", "description": "Java/Spring Boot, FastAPI, Golang, sistemas distribuidos, gRPC, caching y alta disponibilidad." },
+      { "title": "Ingeniería Cloud y DevOps", "description": "Docker, Kubernetes, CI/CD, Azure, AWS, GCP y monitorización con Prometheus y Grafana." },
+      { "title": "Mentoría y resolución de problemas", "description": "Programación competitiva, DSA, diseño de sistemas, preparación de entrevistas y buenas prácticas de código." }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Testimonios",
+    "titlePre": "Lo que dicen",
+    "titleAccent": "los clientes",
+    "subtitle": "Comentarios de founders, CTOs y product leads con quienes he trabajado en Europa, Asia y América.",
+    "prev": "Testimonio anterior",
+    "next": "Siguiente testimonio",
+    "items": [
+      { "name": "Lukas Vogel", "role": "CTO", "organization": "Helix Analytics, Berlín", "quote": "Amulya reconstruyó nuestra orquestación de agentes desde cero. La latencia bajó a la mitad y nuestra tasa de alucinaciones está por fin bajo control. Se hace cargo del problema de punta a punta." },
+      { "name": "Sofia Marchetti", "role": "Head of AI", "organization": "Nordwave Studio, Milán", "quote": "Contratamos a Amulya para entregar una pipeline RAG en cuatro semanas. Entregó en tres, con dashboards de evaluación, trazas y un handoff limpio a mi equipo." },
+      { "name": "Hiroshi Tanaka", "role": "Engineering Director", "organization": "Kaiyo Robotics, Tokio", "quote": "Combinación poco común de intuición ML profunda y disciplina de producción. Nuestra infra de evaluación de LLMs es hoy la pieza más fiable del stack." },
+      { "name": "Élodie Laurent", "role": "Product Lead", "organization": "Lumen Atelier, París", "quote": "Tranquilo, rápido y muy claro por escrito. Amulya convirtió un brief de feature de IA vago en un producto entregado que nuestros usuarios entienden de verdad." },
+      { "name": "Daniel O'Connor", "role": "VP Engineering", "organization": "Ardent Labs, Dublín", "quote": "Se enchufó al equipo en días, no semanas. Honesto con los trade-offs, estricto con el scope, y el código que deja es mantenible." }
+    ]
+  },
+  "playground": {
+    "eyebrow": "Playground",
+    "titlePre": "Un laboratorio",
+    "titleAccent": "de ingeniería interactivo",
+    "subtitle": "Mini demos: flujos de agentes, retrieval, código y una terminal hackeable.",
+    "agentFlow": {
+      "title": "Flujo de agente",
+      "nodes": { "user": "Consulta del usuario", "router": "Router", "tools": "Herramientas", "rag": "RAG", "eval": "Evaluador", "out": "Respuesta" },
+      "caption": "▸ routing · tool-calling · retrieval · evaluación · respuesta"
+    },
+    "terminal": {
+      "title": "Mini terminal",
+      "placeholder": "Escribe un comando…",
+      "ariaLabel": "Comando de terminal",
+      "helpHint": "Try: skills · projects · experience · achievements · social · clear",
+      "helpFull": "Commands: whoami · skills · projects · experience · achievements · social · clear",
+      "projectsOut": "Visita la página de Proyectos para ver repos en vivo de GitHub y trabajo seleccionado.",
+      "notFound": "command not found: {{cmd}} — try \"help\""
+    },
+    "rag": {
+      "title": "Demo de RAG Retrieval",
+      "query": "\"¿Cómo evalúo respuestas de un agente?\"",
+      "answer": "Usar eval sets offline, scoring automatizado en las capas de routing/tooling/respuesta y trazas de Langfuse para observabilidad en producción.",
+      "docs": [{ "title": "LangGraph Orchestration" }, { "title": "RAG Evaluation Loops" }, { "title": "Vector DB Indexing" }]
+    },
+    "snippet": { "title": "Snippet de Agent Graph", "copy": "Copiar código" }
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "titlePre": "Construyamos algo",
+    "titleAccent": "útil",
+    "subtitle": "Envía un mensaje por el formulario seguro. Sin email ni teléfono expuesto. Respondo a consultas reales.",
+    "name": "Nombre",
+    "namePlaceholder": "Jane Doe",
+    "organization": "Organización",
+    "organizationPlaceholder": "Empresa / Equipo",
+    "subject": "Asunto",
+    "subjectPlaceholder": "Presentación breve",
+    "reason": "Motivo",
+    "message": "Mensaje",
+    "messagePlaceholder": "Comparte contexto, enlaces, plazos…",
+    "required": "*",
+    "spamNote": "Protegido de spam · sin email visible",
+    "send": "Enviar mensaje",
+    "sending": "Enviando…",
+    "sent": "Enviado",
+    "toastTitle": "Mensaje recibido",
+    "toastDesc": "Gracias. Te respondo pronto.",
+    "findOnline": "Encuéntrame en línea",
+    "bestFits": "Mejores encajes",
+    "bestFitsList": ["Applied AI · Agentes · RAG", "Roles Backend / Full-Stack", "Mentoría técnica", "Charlas y colaboraciones"],
+    "reasons": {
+      "Collaboration": "Colaboración",
+      "Job Opportunity": "Oportunidad laboral",
+      "Freelance": "Freelance",
+      "Mentorship": "Mentoría",
+      "Speaking": "Ponencia",
+      "Other": "Otro"
+    },
+    "errors": {
+      "name": "Introduce tu nombre.",
+      "subject": "Añade un asunto breve.",
+      "message": "Cuéntame un poco más (20+ caracteres).",
+      "spam": "Spam detectado."
+    }
+  },
+  "blogs": {
+    "eyebrow": "Escritos",
+    "titlePre": "Artículos e",
+    "titleAccent": "Ideas",
+    "subtitle": "Notas más largas sobre ingeniería de IA, agentes y sistemas full-stack. Sincronizadas desde Medium.",
+    "readMore": "Leer en Medium",
+    "readFullPost": "Leer el artículo completo",
+    "loading": "Cargando últimos posts…",
+    "empty": "Aún no hay posts. Vuelve pronto.",
+    "error": "No se pudieron cargar los posts ahora mismo.",
+    "visitMedium": "Visitar Medium →"
+  },
+  "footer": {
+    "tagline": "Construyendo sistemas impulsados por IA y productos full-stack escalables.",
+    "navigate": "Navegar",
+    "connect": "Conectar",
+    "copy": "© {{year}} Amulya Varshney.",
+    "version": "v1.0 · Construido para el rendimiento"
+  },
+  "volunteer": {
+    "eyebrow": "Voluntariado",
+    "titlePre": "Comunidad y",
+    "titleAccent": "Mentoría",
+    "subtitle": "Enseñanza, mentoría y organización. Devolviendo a las comunidades de estudiantes y desarrolladores.",
+    "items": [
+      { "role": "Instructor del curso", "org": "Crio.Do", "period": "Ago 2022 – Ene 2023 · 6 meses", "cause": "Educación", "bullets": ["Acompañé a 200+ estudiantes en proyectos de programación y full-stack, respondiendo dudas y ofreciendo guía individualizada."] },
+      { "role": "Problem Analyst", "org": "GeeksforGeeks", "period": "Mar 2022 – Ago 2022 · 6 meses", "cause": "Educación", "bullets": ["Revisé 1000+ problemas y scripts de programación buscando errores.", "Resolví 2500+ dudas en cursos técnicos y concursos de la plataforma."] },
+      { "role": "Instructor", "org": "HeyCoach", "period": "Dic 2021 – Feb 2022 · 3 meses", "cause": "Educación", "bullets": ["Acompañé a 30+ estudiantes personalmente en DSA, programación y desarrollo web.", "Construí un repo de GitHub con 10+ proyectos y 100+ evaluaciones para medir a candidatos en conceptos y skills."] },
+      { "role": "Programs and Events Head", "org": "E-Cell, IIIT Naya Raipur", "period": "Nov 2020 – Dic 2021 · 1 año 2 meses", "bullets": ["Animé a estudiantes de grado a lanzar empresas basadas en sus visiones.", "Organicé un concurso de trading que unió a 350+ jóvenes de todo el mundo en torno a la educación financiera.", "Organicé el Entrepreneurship Summit que reunió a 2600+ estudiantes y 20+ ponentes."] },
+      { "role": "Miembro central", "org": "ComET, IIIT Naya Raipur", "period": "Ago 2020 – Jul 2021 · 1 año", "cause": "Ciencia y tecnología", "bullets": ["Ayudé a organizar eventos para acercar la electrónica básica a jóvenes entusiastas y resolver sus dudas.", "Construí proyectos de IoT, impresión 3D, dispositivos electrónicos, sensores y actuadores."] }
+    ]
+  },
+  "certifications": {
+    "eyebrow": "Licencias y certificaciones",
+    "titlePre": "Credenciales y",
+    "titleAccent": "Certificaciones",
+    "subtitle": "Formación formal en IA generativa, sistemas multi-agente y plataformas cloud de IA.",
+    "issued": "Emitido",
+    "credential": "ID de credencial",
+    "skills": "Skills",
+    "items": [
+      { "name": "Developing Generative AI Applications on AWS", "issuer": "Amazon Web Services (AWS)", "logo": "aws", "issued": "Nov 2024", "credentialId": "e4zYPeXSekqeWN7-39QiDQ2", "skills": ["Amazon Bedrock", "Generative AI", "LLMs", "Prompt Engineering", "Cloud AI"] },
+      { "name": "Multi AI Agent Systems with crewAI", "issuer": "DeepLearning.AI", "logo": "deeplearning", "issued": "Nov 2024", "credentialId": "", "skills": ["Chatbots", "Generative AI Tools", "Multi-Agent Systems"] }
+    ]
+  },
+  "seo": {
+    "home": { "title": "Amulya Varshney — Ingeniero Applied AI y Full-Stack", "description": "Ingeniero Applied AI que construye sistemas multi-agente, pipelines RAG, LLMOps y productos full-stack escalables." },
+    "portfolio": { "title": "Portafolio — Amulya Varshney", "description": "Formación, experiencia, skills y logros en Applied AI, backend y full-stack." },
+    "projects": { "title": "Proyectos — Amulya Varshney", "description": "Proyectos destacados de agentes de IA, RAG y full-stack, auto-sincronizados con los últimos repos de GitHub." },
+    "services": { "title": "Servicios — Amulya Varshney", "description": "Desarrollo de agentes de IA, apps RAG y LLM, ingeniería de producto full-stack, arquitectura backend y DevOps." },
+    "playground": { "title": "Playground — Amulya Varshney", "description": "Demos interactivas: flujos de agentes de IA, retrieval RAG, visualizaciones de LangGraph, mini juegos para aprender LLMs." },
+    "blogs": { "title": "Blogs — Amulya Varshney", "description": "Notas sobre ingeniería de IA, agentes, RAG y sistemas full-stack. Sincronizadas desde Medium." },
+    "contact": { "title": "Contacto — Amulya Varshney", "description": "Contáctame por Applied AI, roles full-stack, colaboraciones freelance, mentoría o charlas." },
+    "notFound": { "title": "Página no encontrada — Amulya Varshney", "description": "La página que buscas no existe. Vuelve a la portada del portafolio." }
+  }
+}

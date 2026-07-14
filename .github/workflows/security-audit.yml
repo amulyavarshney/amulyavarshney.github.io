@@ -1,0 +1,58 @@
+name: Dependency Security Audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "package.json"
+      - "bun.lock"
+      - "bun.lockb"
+      - ".github/workflows/security-audit.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "package.json"
+      - "bun.lock"
+      - "bun.lockb"
+  schedule:
+    # Daily audit at 06:00 UTC to catch newly disclosed CVEs
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+jobs:
+  audit:
+    name: Audit npm dependencies
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies (npm, no scripts)
+        # We use npm here purely to leverage `npm audit` against the
+        # published registry advisory DB. Bun is the primary package
+        # manager for local dev; this step regenerates a transient
+        # package-lock.json only for auditing.
+        run: npm install --package-lock-only --ignore-scripts
+
+      - name: Run npm audit (high + critical)
+        run: npm audit --audit-level=high
+
+      - name: Upload audit report on failure
+        if: failure()
+        run: npm audit --json > npm-audit.json || true
+
+      - name: Save audit artifact
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: npm-audit-report
+          path: npm-audit.json
+          if-no-files-found: ignore

@@ -1,0 +1,257 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Amulya Varshney portfolio — futuristic AI/engineering design system.
+   All colors HSL. All effects via tokens. */
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 8%;
+
+    --primary: 199 89% 48%;
+    --primary-foreground: 210 40% 98%;
+    --primary-glow: 187 92% 55%;
+
+    --secondary: 262 83% 58%;
+    --secondary-foreground: 210 40% 98%;
+
+    --accent: 168 76% 42%;
+    --accent-foreground: 210 40% 98%;
+
+    --muted: 210 30% 94%;
+    --muted-foreground: 215 16% 38%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 88%;
+    --input: 214 32% 88%;
+    --ring: 199 89% 48%;
+
+    --radius: 1rem;
+
+    /* Glass + glow tokens */
+    --glass-bg: 0 0% 100% / 0.55;
+    --glass-border: 220 30% 80% / 0.4;
+    --glass-blur: 18px;
+
+    --gradient-primary: linear-gradient(135deg, hsl(199 89% 48%), hsl(262 83% 58%));
+    --gradient-aurora: linear-gradient(135deg, hsl(199 89% 48% / 0.9), hsl(262 83% 58% / 0.9), hsl(168 76% 42% / 0.9));
+    --gradient-hero: radial-gradient(ellipse at top, hsl(199 89% 48% / 0.18), transparent 60%),
+                     radial-gradient(ellipse at bottom right, hsl(262 83% 58% / 0.15), transparent 60%);
+    --gradient-text: linear-gradient(135deg, hsl(199 89% 48%), hsl(262 83% 58%), hsl(168 76% 42%));
+
+    --shadow-glow: 0 0 40px hsl(199 89% 48% / 0.25);
+    --shadow-elegant: 0 20px 60px -20px hsl(222 47% 8% / 0.18);
+    --shadow-glass: 0 8px 32px hsl(222 47% 8% / 0.08);
+
+    --grid-color: 220 30% 70% / 0.15;
+  }
+
+  .dark {
+    --background: 222 47% 5%;
+    --foreground: 210 40% 96%;
+
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 96%;
+
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 96%;
+
+    --primary: 187 92% 55%;
+    --primary-foreground: 222 47% 5%;
+    --primary-glow: 199 89% 60%;
+
+    --secondary: 262 83% 65%;
+    --secondary-foreground: 210 40% 96%;
+
+    --accent: 168 76% 50%;
+    --accent-foreground: 222 47% 5%;
+
+    --muted: 222 30% 12%;
+    --muted-foreground: 215 20% 65%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 210 40% 96%;
+
+    --border: 222 30% 18%;
+    --input: 222 30% 14%;
+    --ring: 187 92% 55%;
+
+    --glass-bg: 222 47% 10% / 0.55;
+    --glass-border: 187 92% 55% / 0.18;
+    --glass-blur: 20px;
+
+    --gradient-primary: linear-gradient(135deg, hsl(187 92% 55%), hsl(262 83% 65%));
+    --gradient-aurora: linear-gradient(135deg, hsl(187 92% 55% / 0.85), hsl(262 83% 65% / 0.85), hsl(168 76% 50% / 0.85));
+    --gradient-hero: radial-gradient(ellipse at top, hsl(187 92% 55% / 0.22), transparent 60%),
+                     radial-gradient(ellipse at bottom right, hsl(262 83% 65% / 0.18), transparent 60%);
+    --gradient-text: linear-gradient(135deg, hsl(187 92% 55%), hsl(262 83% 65%), hsl(168 76% 50%));
+
+    --shadow-glow: 0 0 50px hsl(187 92% 55% / 0.35);
+    --shadow-elegant: 0 20px 60px -20px hsl(0 0% 0% / 0.5);
+    --shadow-glass: 0 8px 32px hsl(0 0% 0% / 0.4);
+
+    --grid-color: 187 92% 55% / 0.08;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+  ::selection {
+    background: hsl(var(--primary) / 0.3);
+  }
+  /* Standardized keyboard focus ring across the app. */
+  :focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px hsl(var(--background)), 0 0 0 4px hsl(var(--ring));
+    border-radius: 8px;
+  }
+}
+
+@layer components {
+  .glass {
+    background: hsl(var(--glass-bg));
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid hsl(var(--glass-border));
+    box-shadow: var(--shadow-glass);
+  }
+  .glass-strong {
+    background: hsl(var(--card) / 0.7);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid hsl(var(--glass-border));
+  }
+  .gradient-text {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .gradient-border {
+    position: relative;
+    background: hsl(var(--card));
+    background-clip: padding-box;
+    border: 1px solid transparent;
+  }
+  .gradient-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: var(--gradient-aurora);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+    opacity: 0.6;
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(hsl(var(--grid-color)) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--grid-color)) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+  }
+  .glow {
+    box-shadow: var(--shadow-glow);
+  }
+  .hero-bg {
+    background: var(--gradient-hero);
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .transition-spring { transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
+  .perspective-1000 { perspective: 1000px; }
+  .preserve-3d { transform-style: preserve-3d; }
+  .backface-hidden { backface-visibility: hidden; }
+  .tilt-card {
+    transform: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateZ(0);
+    transition: transform 200ms ease-out;
+    transform-style: preserve-3d;
+  }
+  .tilt-card-inner { transform: translateZ(30px); transform-style: preserve-3d; }
+  .reveal-up { opacity: 0; transform: translateY(28px); transition: opacity 700ms ease, transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1); }
+  .reveal-up.is-visible { opacity: 1; transform: translateY(0); }
+  .holo-border {
+    position: relative;
+  }
+  .holo-border::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: conic-gradient(from var(--a, 0deg), hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent)), hsl(var(--primary)));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    animation: spin-slow 12s linear infinite;
+    pointer-events: none;
+    opacity: 0.7;
+  }
+  .scan-overlay {
+    background: linear-gradient(180deg, transparent, hsl(var(--primary) / 0.18), transparent);
+    height: 40%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: scanline 4s linear infinite;
+    pointer-events: none;
+  }
+  .neural-grid {
+    background-image:
+      radial-gradient(hsl(var(--primary) / 0.25) 1px, transparent 1.5px),
+      radial-gradient(hsl(var(--secondary) / 0.18) 1px, transparent 1.5px);
+    background-size: 24px 24px, 36px 36px;
+    background-position: 0 0, 12px 12px;
+  }
+  .text-shimmer {
+    background: linear-gradient(90deg, hsl(var(--foreground)) 0%, hsl(var(--primary)) 50%, hsl(var(--foreground)) 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: transparent;
+    animation: shimmer 4s linear infinite;
+  }
+}
+
+@property --a {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}

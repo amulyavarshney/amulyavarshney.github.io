@@ -1,0 +1,17 @@
+# Amulya Varshney — Applied AI Engineer
+
+> Portfolio of Amulya Varshney, Software Engineer 2 (Applied AI). AI agents, multi-agent workflows, RAG systems, LLMOps, and full-stack engineering.
+
+## Pages
+
+- [Home](/en): Intro, background, and current focus areas.
+- [Portfolio](/en/portfolio): Education, experience, skills, and achievements.
+- [Projects](/en/projects): Featured and live GitHub projects across AI and full-stack.
+- [Services](/en/services): What I help teams ship — AI agents, RAG, backend, full-stack.
+- [Playground](/en/playground): Interactive demos for AI agent workflows, RAG, and LLM concepts.
+- [Blogs](/en/blogs): Articles on AI engineering, agents, and systems (synced from Medium).
+- [Contact](/en/contact): Secure form for collaborations, roles, mentorship, and speaking.
+
+## Optional
+
+- [Hindi](/hi), [German](/de), [French](/fr), [Spanish](/es): Same pages, localized.
