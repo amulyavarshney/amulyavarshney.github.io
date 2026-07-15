@@ -3,16 +3,7 @@ import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { Section } from "@/components/portfolio/Section";
 import { Seo } from "@/components/Seo";
 import { breadcrumbJsonLd, langUrl, SITE_URL } from "@/lib/site";
-import roadmapHero from "@/assets/guides/roadmap-hero.jpg.asset.json";
-import ragDiagram from "@/assets/guides/rag-diagram.jpg.asset.json";
-import agentsDiagram from "@/assets/guides/agents-diagram.jpg.asset.json";
-import llmopsDiagram from "@/assets/guides/llmops-diagram.jpg.asset.json";
-
-const sectionImages: Record<string, { src: string; alt: string; w: number; h: number }> = {
-  llmops: { src: llmopsDiagram.url, alt: "LLMOps observability stack diagram showing prompts, evals, tracing, and cost/latency dashboards", w: 1408, h: 800 },
-  rag: { src: ragDiagram.url, alt: "RAG pipeline diagram: user query, embedding, vector search, reranker, and LLM generation", w: 1408, h: 800 },
-  agents: { src: agentsDiagram.url, alt: "Multi-agent system diagram with a supervisor coordinating planner, executor, researcher, and critic agents", w: 1408, h: 800 },
-};
+import { HeroBanner, SkillRadar } from "@/components/guides/Infographics";
 
 const sections = [
   {
@@ -162,18 +153,7 @@ const AppliedAiEngineerRoadmap = () => {
           </Link>
         </div>
 
-        <figure className="mb-8 rounded-2xl overflow-hidden border border-border/60 glass">
-          <img
-            src={roadmapHero.url}
-            alt="Applied AI Engineer Roadmap 2026 — seven stages from foundations to portfolio"
-            width={1600}
-            height={912}
-            className="w-full h-auto"
-          />
-          <figcaption className="text-xs text-muted-foreground text-center p-3 border-t border-border/60">
-            The seven stages of the Applied AI Engineer path, from foundations to a shipped portfolio.
-          </figcaption>
-        </figure>
+        <HeroBanner label="The seven stages of the Applied AI Engineer path — from foundations to a shipped portfolio." />
 
         <article className="glass rounded-2xl p-6 md:p-10 space-y-10 max-w-4xl">
           <p className="text-base leading-relaxed text-muted-foreground">
@@ -200,26 +180,13 @@ const AppliedAiEngineerRoadmap = () => {
             </ol>
           </nav>
 
-          {sections.map((s) => {
-            const img = sectionImages[s.id];
-            return (
+          {sections.map((s) => (
               <section key={s.id} id={s.id} className="scroll-mt-28">
                 <h2 className="font-display text-2xl md:text-3xl font-semibold mb-3">
                   {s.title}
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">{s.body}</p>
-                {img && (
-                  <figure className="my-5 rounded-xl overflow-hidden border border-border/60">
-                    <img
-                      src={img.src}
-                      alt={img.alt}
-                      loading="lazy"
-                      width={img.w}
-                      height={img.h}
-                      className="w-full h-auto"
-                    />
-                  </figure>
-                )}
+                {s.id === "foundations" && <SkillRadar />}
                 <ul className="space-y-2">
                   {s.checklist.map((item) => (
                     <li key={item} className="flex items-start gap-2 text-sm">
@@ -229,8 +196,7 @@ const AppliedAiEngineerRoadmap = () => {
                   ))}
                 </ul>
               </section>
-            );
-          })}
+          ))}
 
           <section className="border-t border-border/60 pt-8">
             <h2 className="font-display text-2xl font-semibold mb-3">

@@ -5,15 +5,13 @@ on:
     branches: [main]
     paths:
       - "package.json"
-      - "bun.lock"
-      - "bun.lockb"
+      - "package-lock.json"
       - ".github/workflows/security-audit.yml"
   pull_request:
     branches: [main]
     paths:
       - "package.json"
-      - "bun.lock"
-      - "bun.lockb"
+      - "package-lock.json"
   schedule:
     # Daily audit at 06:00 UTC to catch newly disclosed CVEs
     - cron: "0 6 * * *"
@@ -25,7 +23,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      security-events: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -36,10 +33,6 @@ jobs:
           node-version: "20"
 
       - name: Install dependencies (npm, no scripts)
-        # We use npm here purely to leverage `npm audit` against the
-        # published registry advisory DB. Bun is the primary package
-        # manager for local dev; this step regenerates a transient
-        # package-lock.json only for auditing.
         run: npm install --package-lock-only --ignore-scripts
 
       - name: Run npm audit (high + critical)

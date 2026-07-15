@@ -53,7 +53,7 @@ This repo is my personal portfolio site — experience and skills, featured proj
 
 ```text
 React 18  ·  TypeScript  ·  Vite
-Tailwind CSS  ·  shadcn/ui
+Tailwind CSS
 React Router  ·  i18next
 Three.js / React Three Fiber
 Vitest
@@ -90,23 +90,23 @@ Dev server defaults to `http://localhost:8080`.
 | `npm run lint` | ESLint |
 | `npm run audit` | Dependency audit (high severity) |
 
-Sitemap generation (`scripts/generate-sitemap.ts`) runs automatically before `dev` and `build`.
+Sitemap generation (`scripts/generate-sitemap.mjs`) runs automatically before `dev` and `build`.
 
 ## Project layout
 
 ```text
-docs/                 README graphics (circular profile)
+docs/           README profile graphic
 src/
-  components/         Layout, portfolio sections, playground labs, UI
-  data/               Projects, case studies, playground definitions
-  i18n/               Locale files and language routing
-  pages/              Route pages and long-form guides
-  assets/             Photos and media
-  lib/                Shared utilities
+  components/   Layout, portfolio sections, playground labs, UI
+  data/         Projects, case studies, playground definitions
+  i18n/         Locale files and language routing
+  pages/        Route pages and long-form guides
+  assets/       Photos and media
+  lib/          Shared utilities
 scripts/
-  generate-sitemap.ts
+  generate-sitemap.mjs
 public/
-  sitemap.xml · robots.txt · llms.txt
+  sitemap.xml · robots.txt · llms.txt · og-image.jpg
 ```
 
 ## License

@@ -1,8 +1,5 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import { Layout } from "@/components/portfolio/Layout";
 import { LanguageRoute, RootRedirect } from "@/i18n/LanguageRouter";
 import Home from "./pages/Home";
@@ -19,42 +16,34 @@ import ContactPage from "./pages/ContactPage";
 import CaseStudyPage from "./pages/CaseStudyPage";
 import NotFound from "./pages/NotFound.tsx";
 
-const queryClient = new QueryClient();
-
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          {/* Redirect root + un-prefixed paths to the persisted/detected language */}
-          <Route path="/" element={<RootRedirect />} />
+  <>
+    <Toaster />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<RootRedirect />} />
 
-          {/* Language-prefixed routes: /en, /hi, /de, /fr, /es */}
-          <Route path="/:lang" element={<LanguageRoute />}>
-            <Route element={<Layout />}>
-              <Route index element={<Home />} />
-              <Route path="portfolio" element={<PortfolioPage />} />
-              <Route path="projects" element={<ProjectsPage />} />
-              <Route path="projects/case-study/:slug" element={<CaseStudyPage />} />
-              <Route path="services" element={<ServicesPage />} />
-              <Route path="playground" element={<PlaygroundPage />} />
-              <Route path="blogs" element={<BlogsPage />} />
-              <Route path="blogs/applied-ai-engineer-roadmap" element={<AppliedAiEngineerRoadmap />} />
-              <Route path="blogs/qdrant-fastapi-grpc-guide" element={<QdrantFastapiGrpcGuide />} />
-              <Route path="blogs/ai-engineer-job-requirements" element={<AiEngineerJobRequirementsGuide />} />
-              <Route path="blogs/multi-agent-eval-guide" element={<MultiAgentEvalGuide />} />
-              <Route path="contact" element={<ContactPage />} />
-            </Route>
+        <Route path="/:lang" element={<LanguageRoute />}>
+          <Route element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="portfolio" element={<PortfolioPage />} />
+            <Route path="projects" element={<ProjectsPage />} />
+            <Route path="projects/case-study/:slug" element={<CaseStudyPage />} />
+            <Route path="services" element={<ServicesPage />} />
+            <Route path="playground" element={<PlaygroundPage />} />
+            <Route path="blogs" element={<BlogsPage />} />
+            <Route path="blogs/applied-ai-engineer-roadmap" element={<AppliedAiEngineerRoadmap />} />
+            <Route path="blogs/qdrant-fastapi-grpc-guide" element={<QdrantFastapiGrpcGuide />} />
+            <Route path="blogs/ai-engineer-job-requirements" element={<AiEngineerJobRequirementsGuide />} />
+            <Route path="blogs/multi-agent-eval-guide" element={<MultiAgentEvalGuide />} />
+            <Route path="contact" element={<ContactPage />} />
           </Route>
+        </Route>
 
-          {/* Catch-all */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  </>
 );
 
 export default App;
