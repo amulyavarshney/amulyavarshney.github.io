@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { Section } from "@/components/portfolio/Section";
 import { Seo } from "@/components/Seo";
+import { breadcrumbJsonLd, langUrl, SITE_URL } from "@/lib/site";
 import { HeroBanner, QdrantArchDiagram, LatencyComparison } from "@/components/guides/Infographics";
 
 const sections = [
@@ -143,6 +144,8 @@ async def search(
 const QdrantFastapiGrpcGuide = () => {
   const { lang = "en" } = useParams<{ lang: string }>();
 
+  const path = "/blogs/qdrant-fastapi-grpc-guide";
+  const pageUrl = langUrl(lang, path);
   const jsonLd = [
     {
       "@context": "https://schema.org",
@@ -150,28 +153,22 @@ const QdrantFastapiGrpcGuide = () => {
       headline: "Qdrant + FastAPI + gRPC: A Production Guide with the Singleton Client Pattern",
       description:
         "A practical guide to deploying Qdrant with gRPC and FastAPI: singleton AsyncQdrantClient, lifespan wiring, named vectors, hybrid search, tracing, and Kubernetes deployment.",
-      author: { "@type": "Person", name: "Amulya Varshney" },
+      author: { "@id": `${SITE_URL}/#person` },
       datePublished: "2026-07-14",
       dateModified: "2026-07-14",
       inLanguage: lang,
-      mainEntityOfPage: `/${lang}/blogs/qdrant-fastapi-grpc-guide`,
+      url: pageUrl,
+      mainEntityOfPage: pageUrl,
+      image: `${SITE_URL}/og-image.jpg`,
+      isPartOf: { "@id": `${SITE_URL}/#website` },
       keywords:
-        "qdrant grpc client, qdrant fastapi, async qdrant client, vector database production, llmops rag, singleton client pattern",
+        "qdrant grpc client, qdrant fastapi, async qdrant client, vector database production, llmops rag, singleton client pattern, Amulya Varshney",
     },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: `/${lang}` },
-        { "@type": "ListItem", position: 2, name: "Blogs", item: `/${lang}/blogs` },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: "Qdrant + FastAPI + gRPC Guide",
-          item: `/${lang}/blogs/qdrant-fastapi-grpc-guide`,
-        },
-      ],
-    },
+    breadcrumbJsonLd(lang, [
+      { name: "Home", path: "/" },
+      { name: "Blogs", path: "/blogs" },
+      { name: "Qdrant + FastAPI + gRPC Guide", path },
+    ]),
   ];
 
   return (

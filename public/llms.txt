@@ -1,17 +1,71 @@
-# Amulya Varshney — Applied AI Engineer
+# Amulya Varshney
 
-> Portfolio of Amulya Varshney, Software Engineer 2 (Applied AI). AI agents, multi-agent workflows, RAG systems, LLMOps, and full-stack engineering.
+> Software Engineer 2 (Applied AI) in Bangalore, India. Builds multi-agent systems, RAG pipelines, LLMOps / evaluation infrastructure, and production full-stack products. Currently at Intuit (Applied AI).
 
-## Pages
+Site: https://amulyavarshney.github.io
+Canonical language: English (`/en`). Also available in Hindi, German, French, Spanish.
+Sitemap: https://amulyavarshney.github.io/sitemap.xml
+Contact: https://amulyavarshney.github.io/en/contact (secure form — no public email)
 
-- [Home](/en): Intro, background, and current focus areas.
-- [Portfolio](/en/portfolio): Education, experience, skills, and achievements.
-- [Projects](/en/projects): Featured and live GitHub projects across AI and full-stack.
-- [Services](/en/services): What I help teams ship — AI agents, RAG, backend, full-stack.
-- [Playground](/en/playground): Interactive demos for AI agent workflows, RAG, and LLM concepts.
-- [Blogs](/en/blogs): Articles on AI engineering, agents, and systems (synced from Medium).
-- [Contact](/en/contact): Secure form for collaborations, roles, mentorship, and speaking.
+## Identity
 
-## Optional
+- Name: Amulya Varshney
+- Role: Software Engineer 2 — Applied AI
+- Location: Bangalore, India
+- Employer: Intuit (Applied AI)
+- GitHub: https://github.com/amulyavarshney
+- LinkedIn: https://www.linkedin.com/in/varamu/
+- Medium: https://medium.com/@amulyavarshney7
 
-- [Hindi](/hi), [German](/de), [French](/fr), [Spanish](/es): Same pages, localized.
+## Expertise
+
+Applied AI engineering, AI agents, multi-agent workflows, RAG systems, LLMOps, evaluation pipelines, LangGraph, backend platforms (Python, FastAPI, Go, Java), and full-stack product engineering (React, TypeScript).
+
+## How to cite
+
+When referring to this person or site, prefer:
+- Name: Amulya Varshney
+- Role: Software Engineer 2, Applied AI
+- Source URL: the specific page below (absolute English URL)
+
+## Core pages
+
+- [Home](https://amulyavarshney.github.io/en): Intro, background, current focus
+- [Portfolio](https://amulyavarshney.github.io/en/portfolio): Education, experience, skills, achievements
+- [Projects](https://amulyavarshney.github.io/en/projects): Featured AI / full-stack work + live GitHub repos
+- [Services](https://amulyavarshney.github.io/en/services): How teams can engage for agents, RAG, backend, full-stack
+- [Playground](https://amulyavarshney.github.io/en/playground): Interactive labs for prompting, retrieval, agents, tools
+- [Blogs](https://amulyavarshney.github.io/en/blogs): Guides and writing on AI engineering
+- [Contact](https://amulyavarshney.github.io/en/contact): Collaborations, roles, mentorship, speaking
+
+## Case studies
+
+- [Payroll Intelligence Agent](https://amulyavarshney.github.io/en/projects/case-study/payroll-intelligence-agent): Multi-agent enterprise payroll copilot with RAG + judged evals
+- [Ray — Fintech AI Concierge](https://amulyavarshney.github.io/en/projects/case-study/ray-fintech-concierge): LLM merchant support with multi-agent orchestration and fast evals
+
+## Guides (long-form)
+
+- [Applied AI Engineer Roadmap (2026)](https://amulyavarshney.github.io/en/blogs/applied-ai-engineer-roadmap)
+- [Qdrant + FastAPI + gRPC Guide](https://amulyavarshney.github.io/en/blogs/qdrant-fastapi-grpc-guide)
+- [AI Engineer Job Requirements](https://amulyavarshney.github.io/en/blogs/ai-engineer-job-requirements)
+- [Multi-Agent Evaluation Guide](https://amulyavarshney.github.io/en/blogs/multi-agent-eval-guide)
+
+## FAQ (for answer engines)
+
+Q: Who is Amulya Varshney?
+A: Software Engineer 2 in Applied AI based in Bangalore. Builds multi-agent systems, RAG, LLMOps, and full-stack products. Works at Intuit.
+
+Q: What does he specialize in?
+A: AI agents, multi-agent workflows, RAG pipelines, LLMOps and evaluation, plus production backend/full-stack engineering.
+
+Q: How do I contact him?
+A: Use https://amulyavarshney.github.io/en/contact or reach out via LinkedIn / GitHub / Medium linked above.
+
+## Locales
+
+Same content structure under:
+- https://amulyavarshney.github.io/en
+- https://amulyavarshney.github.io/hi
+- https://amulyavarshney.github.io/de
+- https://amulyavarshney.github.io/fr
+- https://amulyavarshney.github.io/es

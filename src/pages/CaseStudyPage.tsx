@@ -5,31 +5,48 @@ import { LangLink as Link } from "@/components/LangLink";
 import { Seo } from "@/components/Seo";
 import { Reveal } from "@/components/portfolio/Reveal";
 import { caseStudies } from "@/data/caseStudies";
+import { breadcrumbJsonLd, langUrl, SITE_URL } from "@/lib/site";
 
 const CaseStudyPage = () => {
-  const { slug } = useParams<{ slug: string }>();
+  const { slug, lang = "en" } = useParams<{ slug: string; lang: string }>();
   const { i18n } = useTranslation();
   const cs = caseStudies.find((c) => c.slug === slug);
 
   if (!cs) return <Navigate to={`/${i18n.language || "en"}/projects`} replace />;
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "CreativeWork",
-    name: cs.title,
-    headline: cs.title,
-    description: cs.tagline,
-    author: { "@type": "Person", name: "Amulya Varshney" },
-    keywords: cs.stack.join(", "),
-  };
+  const path = `/projects/case-study/${cs.slug}`;
+  const pageUrl = langUrl(lang, path);
+
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      headline: cs.title,
+      name: cs.title,
+      description: cs.tagline,
+      author: { "@id": `${SITE_URL}/#person` },
+      url: pageUrl,
+      mainEntityOfPage: pageUrl,
+      keywords: cs.stack.join(", "),
+      about: cs.stack,
+      inLanguage: lang,
+      isPartOf: { "@id": `${SITE_URL}/#website` },
+    },
+    breadcrumbJsonLd(lang, [
+      { name: "Home", path: "/" },
+      { name: "Projects", path: "/projects" },
+      { name: cs.title, path },
+    ]),
+  ];
 
   return (
     <article className="pt-24 pb-20">
       <Seo
-        title={`${cs.title} — Case Study`}
+        title={`${cs.title} — Case Study | Amulya Varshney`}
         description={cs.tagline}
-        path={`/projects/case-study/${cs.slug}`}
+        path={path}
         type="article"
+        keywords={cs.stack}
         jsonLd={jsonLd}
       />
 

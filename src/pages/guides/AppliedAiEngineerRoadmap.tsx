@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { Section } from "@/components/portfolio/Section";
 import { Seo } from "@/components/Seo";
+import { breadcrumbJsonLd, langUrl, SITE_URL } from "@/lib/site";
 import roadmapHero from "@/assets/guides/roadmap-hero.jpg.asset.json";
 import ragDiagram from "@/assets/guides/rag-diagram.jpg.asset.json";
 import agentsDiagram from "@/assets/guides/agents-diagram.jpg.asset.json";
@@ -101,6 +102,8 @@ const sections = [
 const AppliedAiEngineerRoadmap = () => {
   const { lang = "en" } = useParams<{ lang: string }>();
 
+  const path = "/blogs/applied-ai-engineer-roadmap";
+  const pageUrl = langUrl(lang, path);
   const jsonLd = [
     {
       "@context": "https://schema.org",
@@ -108,28 +111,22 @@ const AppliedAiEngineerRoadmap = () => {
       headline: "The Applied AI Engineer Roadmap: Skills and Tools for 2026",
       description:
         "A step-by-step learning path for becoming an Applied AI Engineer — covering Python, transformers, LLMOps, RAG pipelines, multi-agent systems, and production deployment.",
-      author: { "@type": "Person", name: "Amulya Varshney" },
+      author: { "@id": `${SITE_URL}/#person` },
       datePublished: "2026-07-14",
       dateModified: "2026-07-14",
       inLanguage: lang,
-      mainEntityOfPage: `/${lang}/blogs/applied-ai-engineer-roadmap`,
+      url: pageUrl,
+      mainEntityOfPage: pageUrl,
+      image: `${SITE_URL}/og-image.jpg`,
+      isPartOf: { "@id": `${SITE_URL}/#website` },
       keywords:
-        "ai engineer, applied ai, llmops, rag pipelines, multi-agent systems, ai engineer roadmap",
+        "ai engineer, applied ai, llmops, rag pipelines, multi-agent systems, ai engineer roadmap, Amulya Varshney",
     },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: `/${lang}` },
-        { "@type": "ListItem", position: 2, name: "Blogs", item: `/${lang}/blogs` },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: "Applied AI Engineer Roadmap",
-          item: `/${lang}/blogs/applied-ai-engineer-roadmap`,
-        },
-      ],
-    },
+    breadcrumbJsonLd(lang, [
+      { name: "Home", path: "/" },
+      { name: "Blogs", path: "/blogs" },
+      { name: "Applied AI Engineer Roadmap", path },
+    ]),
   ];
 
   return (

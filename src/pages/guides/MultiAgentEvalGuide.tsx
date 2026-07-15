@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { Section } from "@/components/portfolio/Section";
 import { Seo } from "@/components/Seo";
+import { breadcrumbJsonLd, langUrl, SITE_URL } from "@/lib/site";
 import {
   HeroBanner,
   EvalPipelineDiagram,
@@ -123,6 +124,8 @@ const sections = [
 const MultiAgentEvalGuide = () => {
   const { lang = "en" } = useParams<{ lang: string }>();
 
+  const path = "/blogs/multi-agent-eval-guide";
+  const pageUrl = langUrl(lang, path);
   const jsonLd = [
     {
       "@context": "https://schema.org",
@@ -130,28 +133,22 @@ const MultiAgentEvalGuide = () => {
       headline: "Building Evaluation Pipelines for Multi-Agent Workflows",
       description:
         "A production guide to evaluating multi-agent AI workflows with LangGraph and Langfuse — judge models, trajectory grading, regression tests, and tracing.",
-      author: { "@type": "Person", name: "Amulya Varshney" },
+      author: { "@id": `${SITE_URL}/#person` },
       datePublished: "2026-07-15",
       dateModified: "2026-07-15",
       inLanguage: lang,
-      mainEntityOfPage: `/${lang}/blogs/multi-agent-eval-guide`,
+      url: pageUrl,
+      mainEntityOfPage: pageUrl,
+      image: `${SITE_URL}/og-image.jpg`,
+      isPartOf: { "@id": `${SITE_URL}/#website` },
       keywords:
-        "multi-agent evaluation, langgraph evals, langfuse tracing, ai engineer, applied ai, llm judge, agent regression testing, agentic ai evaluation",
+        "multi-agent evaluation, langgraph evals, langfuse tracing, ai engineer, applied ai, llm judge, agent regression testing, agentic ai evaluation, Amulya Varshney",
     },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: `/${lang}` },
-        { "@type": "ListItem", position: 2, name: "Blogs", item: `/${lang}/blogs` },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: "Multi-Agent Evaluation Pipelines",
-          item: `/${lang}/blogs/multi-agent-eval-guide`,
-        },
-      ],
-    },
+    breadcrumbJsonLd(lang, [
+      { name: "Home", path: "/" },
+      { name: "Blogs", path: "/blogs" },
+      { name: "Multi-Agent Evaluation Pipelines", path },
+    ]),
   ];
 
   return (

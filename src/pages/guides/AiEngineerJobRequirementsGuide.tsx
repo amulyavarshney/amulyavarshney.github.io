@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { Section } from "@/components/portfolio/Section";
 import { Seo } from "@/components/Seo";
+import { breadcrumbJsonLd, langUrl, SITE_URL } from "@/lib/site";
 import { HeroBanner, SkillRadar, InterviewFunnel } from "@/components/guides/Infographics";
 
 const sections = [
@@ -101,6 +102,8 @@ const sections = [
 const AiEngineerJobRequirementsGuide = () => {
   const { lang = "en" } = useParams<{ lang: string }>();
 
+  const path = "/blogs/ai-engineer-job-requirements";
+  const pageUrl = langUrl(lang, path);
   const jsonLd = [
     {
       "@context": "https://schema.org",
@@ -108,28 +111,22 @@ const AiEngineerJobRequirementsGuide = () => {
       headline: "AI Engineer Job Requirements: A 2026 Preparation Checklist",
       description:
         "The technical skills, portfolio expectations, and interview requirements for AI engineer roles in 2026 — covering LLMs, RAG, agents, LLMOps, and evaluation.",
-      author: { "@type": "Person", name: "Amulya Varshney" },
+      author: { "@id": `${SITE_URL}/#person` },
       datePublished: "2026-07-14",
       dateModified: "2026-07-14",
       inLanguage: lang,
-      mainEntityOfPage: `/${lang}/blogs/ai-engineer-job-requirements`,
+      url: pageUrl,
+      mainEntityOfPage: pageUrl,
+      image: `${SITE_URL}/og-image.jpg`,
+      isPartOf: { "@id": `${SITE_URL}/#website` },
       keywords:
-        "ai engineer job requirements, ai engineer skills, ai engineer portfolio, applied ai engineer interview, llm engineer requirements",
+        "ai engineer job requirements, ai engineer skills, ai engineer portfolio, applied ai engineer interview, llm engineer requirements, Amulya Varshney",
     },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: `/${lang}` },
-        { "@type": "ListItem", position: 2, name: "Blogs", item: `/${lang}/blogs` },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: "AI Engineer Job Requirements",
-          item: `/${lang}/blogs/ai-engineer-job-requirements`,
-        },
-      ],
-    },
+    breadcrumbJsonLd(lang, [
+      { name: "Home", path: "/" },
+      { name: "Blogs", path: "/blogs" },
+      { name: "AI Engineer Job Requirements", path },
+    ]),
   ];
 
   return (

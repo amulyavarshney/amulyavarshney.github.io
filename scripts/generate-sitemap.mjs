@@ -5,6 +5,7 @@ import { fileURLToPath } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const BASE_URL = "https://amulyavarshney.github.io";
+const DEFAULT_LANG = "en";
 
 const LANGS = ["en", "hi", "de", "fr", "es"];
 const PATHS = [
@@ -23,14 +24,18 @@ const PATHS = [
   "projects/case-study/ray-fintech-concierge",
 ];
 
+const lastmod = new Date().toISOString().slice(0, 10);
+
 const entries = PATHS.map((p) => {
-  const canonical = p ? `/${p}` : `/`;
+  const suffix = p ? `/${p}` : "";
+  const canonical = `/${DEFAULT_LANG}${suffix}`;
   return {
     path: canonical,
-    changefreq: "weekly",
-    priority: p === "" ? "1.0" : "0.8",
+    changefreq: p.startsWith("blogs/") || p.startsWith("projects/case-study") ? "monthly" : "weekly",
+    priority: p === "" ? "1.0" : p.startsWith("blogs/") || p.startsWith("projects/case-study") ? "0.7" : "0.8",
+    lastmod,
     alternates: [
-      ...LANGS.map((l) => ({ lang: l, href: p ? `/${l}/${p}` : `/${l}` })),
+      ...LANGS.map((l) => ({ lang: l, href: `/${l}${suffix}` })),
       { lang: "x-default", href: canonical },
     ],
   };
@@ -43,6 +48,7 @@ const xml = [
     [
       `  <url>`,
       `    <loc>${BASE_URL}${e.path}</loc>`,
+      `    <lastmod>${e.lastmod}</lastmod>`,
       `    <changefreq>${e.changefreq}</changefreq>`,
       `    <priority>${e.priority}</priority>`,
       ...e.alternates.map(

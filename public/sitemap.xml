@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://amulyavarshney.github.io/</loc>
+    <loc>https://amulyavarshney.github.io/en</loc>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://amulyavarshney.github.io/en" />
@@ -9,10 +10,11 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://amulyavarshney.github.io/de" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://amulyavarshney.github.io/fr" />
     <xhtml:link rel="alternate" hreflang="es" href="https://amulyavarshney.github.io/es" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://amulyavarshney.github.io/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://amulyavarshney.github.io/en" />
   </url>
   <url>
-    <loc>https://amulyavarshney.github.io/portfolio</loc>
+    <loc>https://amulyavarshney.github.io/en/portfolio</loc>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://amulyavarshney.github.io/en/portfolio" />
@@ -20,10 +22,11 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://amulyavarshney.github.io/de/portfolio" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://amulyavarshney.github.io/fr/portfolio" />
     <xhtml:link rel="alternate" hreflang="es" href="https://amulyavarshney.github.io/es/portfolio" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://amulyavarshney.github.io/portfolio" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://amulyavarshney.github.io/en/portfolio" />
   </url>
   <url>
-    <loc>https://amulyavarshney.github.io/projects</loc>
+    <loc>https://amulyavarshney.github.io/en/projects</loc>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://amulyavarshney.github.io/en/projects" />
@@ -31,10 +34,11 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://amulyavarshney.github.io/de/projects" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://amulyavarshney.github.io/fr/projects" />
     <xhtml:link rel="alternate" hreflang="es" href="https://amulyavarshney.github.io/es/projects" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://amulyavarshney.github.io/projects" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://amulyavarshney.github.io/en/projects" />
   </url>
   <url>
-    <loc>https://amulyavarshney.github.io/services</loc>
+    <loc>https://amulyavarshney.github.io/en/services</loc>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://amulyavarshney.github.io/en/services" />
@@ -42,10 +46,11 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://amulyavarshney.github.io/de/services" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://amulyavarshney.github.io/fr/services" />
     <xhtml:link rel="alternate" hreflang="es" href="https://amulyavarshney.github.io/es/services" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://amulyavarshney.github.io/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://amulyavarshney.github.io/en/services" />
   </url>
   <url>
-    <loc>https://amulyavarshney.github.io/playground</loc>
+    <loc>https://amulyavarshney.github.io/en/playground</loc>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://amulyavarshney.github.io/en/playground" />
@@ -53,10 +58,11 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://amulyavarshney.github.io/de/playground" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://amulyavarshney.github.io/fr/playground" />
     <xhtml:link rel="alternate" hreflang="es" href="https://amulyavarshney.github.io/es/playground" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://amulyavarshney.github.io/playground" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://amulyavarshney.github.io/en/playground" />
   </url>
   <url>
-    <loc>https://amulyavarshney.github.io/blogs</loc>
+    <loc>https://amulyavarshney.github.io/en/blogs</loc>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://amulyavarshney.github.io/en/blogs" />
@@ -64,54 +70,59 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://amulyavarshney.github.io/de/blogs" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://amulyavarshney.github.io/fr/blogs" />
     <xhtml:link rel="alternate" hreflang="es" href="https://amulyavarshney.github.io/es/blogs" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://amulyavarshney.github.io/blogs" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://amulyavarshney.github.io/en/blogs" />
   </url>
   <url>
-    <loc>https://amulyavarshney.github.io/blogs/applied-ai-engineer-roadmap</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://amulyavarshney.github.io/en/blogs/applied-ai-engineer-roadmap</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://amulyavarshney.github.io/en/blogs/applied-ai-engineer-roadmap" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://amulyavarshney.github.io/hi/blogs/applied-ai-engineer-roadmap" />
     <xhtml:link rel="alternate" hreflang="de" href="https://amulyavarshney.github.io/de/blogs/applied-ai-engineer-roadmap" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://amulyavarshney.github.io/fr/blogs/applied-ai-engineer-roadmap" />
     <xhtml:link rel="alternate" hreflang="es" href="https://amulyavarshney.github.io/es/blogs/applied-ai-engineer-roadmap" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://amulyavarshney.github.io/blogs/applied-ai-engineer-roadmap" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://amulyavarshney.github.io/en/blogs/applied-ai-engineer-roadmap" />
   </url>
   <url>
-    <loc>https://amulyavarshney.github.io/blogs/qdrant-fastapi-grpc-guide</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://amulyavarshney.github.io/en/blogs/qdrant-fastapi-grpc-guide</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://amulyavarshney.github.io/en/blogs/qdrant-fastapi-grpc-guide" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://amulyavarshney.github.io/hi/blogs/qdrant-fastapi-grpc-guide" />
     <xhtml:link rel="alternate" hreflang="de" href="https://amulyavarshney.github.io/de/blogs/qdrant-fastapi-grpc-guide" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://amulyavarshney.github.io/fr/blogs/qdrant-fastapi-grpc-guide" />
     <xhtml:link rel="alternate" hreflang="es" href="https://amulyavarshney.github.io/es/blogs/qdrant-fastapi-grpc-guide" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://amulyavarshney.github.io/blogs/qdrant-fastapi-grpc-guide" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://amulyavarshney.github.io/en/blogs/qdrant-fastapi-grpc-guide" />
   </url>
   <url>
-    <loc>https://amulyavarshney.github.io/blogs/ai-engineer-job-requirements</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://amulyavarshney.github.io/en/blogs/ai-engineer-job-requirements</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://amulyavarshney.github.io/en/blogs/ai-engineer-job-requirements" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://amulyavarshney.github.io/hi/blogs/ai-engineer-job-requirements" />
     <xhtml:link rel="alternate" hreflang="de" href="https://amulyavarshney.github.io/de/blogs/ai-engineer-job-requirements" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://amulyavarshney.github.io/fr/blogs/ai-engineer-job-requirements" />
     <xhtml:link rel="alternate" hreflang="es" href="https://amulyavarshney.github.io/es/blogs/ai-engineer-job-requirements" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://amulyavarshney.github.io/blogs/ai-engineer-job-requirements" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://amulyavarshney.github.io/en/blogs/ai-engineer-job-requirements" />
   </url>
   <url>
-    <loc>https://amulyavarshney.github.io/blogs/multi-agent-eval-guide</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://amulyavarshney.github.io/en/blogs/multi-agent-eval-guide</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://amulyavarshney.github.io/en/blogs/multi-agent-eval-guide" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://amulyavarshney.github.io/hi/blogs/multi-agent-eval-guide" />
     <xhtml:link rel="alternate" hreflang="de" href="https://amulyavarshney.github.io/de/blogs/multi-agent-eval-guide" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://amulyavarshney.github.io/fr/blogs/multi-agent-eval-guide" />
     <xhtml:link rel="alternate" hreflang="es" href="https://amulyavarshney.github.io/es/blogs/multi-agent-eval-guide" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://amulyavarshney.github.io/blogs/multi-agent-eval-guide" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://amulyavarshney.github.io/en/blogs/multi-agent-eval-guide" />
   </url>
   <url>
-    <loc>https://amulyavarshney.github.io/contact</loc>
+    <loc>https://amulyavarshney.github.io/en/contact</loc>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://amulyavarshney.github.io/en/contact" />
@@ -119,28 +130,30 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://amulyavarshney.github.io/de/contact" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://amulyavarshney.github.io/fr/contact" />
     <xhtml:link rel="alternate" hreflang="es" href="https://amulyavarshney.github.io/es/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://amulyavarshney.github.io/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://amulyavarshney.github.io/en/contact" />
   </url>
   <url>
-    <loc>https://amulyavarshney.github.io/projects/case-study/payroll-intelligence-agent</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://amulyavarshney.github.io/en/projects/case-study/payroll-intelligence-agent</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://amulyavarshney.github.io/en/projects/case-study/payroll-intelligence-agent" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://amulyavarshney.github.io/hi/projects/case-study/payroll-intelligence-agent" />
     <xhtml:link rel="alternate" hreflang="de" href="https://amulyavarshney.github.io/de/projects/case-study/payroll-intelligence-agent" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://amulyavarshney.github.io/fr/projects/case-study/payroll-intelligence-agent" />
     <xhtml:link rel="alternate" hreflang="es" href="https://amulyavarshney.github.io/es/projects/case-study/payroll-intelligence-agent" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://amulyavarshney.github.io/projects/case-study/payroll-intelligence-agent" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://amulyavarshney.github.io/en/projects/case-study/payroll-intelligence-agent" />
   </url>
   <url>
-    <loc>https://amulyavarshney.github.io/projects/case-study/ray-fintech-concierge</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://amulyavarshney.github.io/en/projects/case-study/ray-fintech-concierge</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://amulyavarshney.github.io/en/projects/case-study/ray-fintech-concierge" />
     <xhtml:link rel="alternate" hreflang="hi" href="https://amulyavarshney.github.io/hi/projects/case-study/ray-fintech-concierge" />
     <xhtml:link rel="alternate" hreflang="de" href="https://amulyavarshney.github.io/de/projects/case-study/ray-fintech-concierge" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://amulyavarshney.github.io/fr/projects/case-study/ray-fintech-concierge" />
     <xhtml:link rel="alternate" hreflang="es" href="https://amulyavarshney.github.io/es/projects/case-study/ray-fintech-concierge" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://amulyavarshney.github.io/projects/case-study/ray-fintech-concierge" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://amulyavarshney.github.io/en/projects/case-study/ray-fintech-concierge" />
   </url>
 </urlset>
